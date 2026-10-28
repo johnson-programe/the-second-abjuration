@@ -9345,8 +9345,18 @@ if = {
 			else = {
 				add_ideas = hol_koloniaal_dividend_idea
 			}
-			if = { limit = { country_exists = SPR } add_to_faction = SPR }
-			if = { limit = { country_exists = POR } add_to_faction = POR }
+			if = {
+				limit = { country_exists = SPR }
+				if = { limit = { NOT = { SPR = { is_subject_of = HOL } } } puppet = SPR }
+				set_autonomy = { target = SPR autonomous_state = hol_brother_republic }
+				add_to_faction = SPR
+			}
+			if = {
+				limit = { country_exists = POR }
+				if = { limit = { NOT = { POR = { is_subject_of = HOL } } } puppet = POR }
+				set_autonomy = { target = POR autonomous_state = hol_brother_republic }
+				add_to_faction = POR
+			}
 		}
 	}
 

@@ -68,14 +68,25 @@ joint_focus = {
 			limit = {
 				NOT = { tag = HOL }
 				NOT = { is_subject_of = HOL }
-				any_owned_state = { OR = { region = 35 region = 124 region = 125 region = 288 region = 163 region = 280 region = 34 region = 53 } }
+				any_owned_state = { OR = { is_on_continent = south_america region = 34 region = 53 } }
 			}
-			ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			HOL = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+		every_country = {
+			every_owned_state = {
+				limit = { OR = { is_on_continent = south_america region = 34 region = 53 } }
+				add_core_of = SUR
+			}
 		}
 	}
 	completion_reward_joint_member = {
 		add_political_power = 25
-			every_state = { limit = { OR = { region = 35 region = 124 region = 125 region = 288 region = 163 region = 280 region = 34 region = 53 } } add_core_of = SUR }
+		every_country = {
+			every_owned_state = {
+				limit = { OR = { is_on_continent = south_america region = 34 region = 53 } }
+				add_core_of = SUR
+			}
+		}
 	}
 }
 
@@ -199,14 +210,25 @@ joint_focus = {
 			limit = {
 				NOT = { tag = HOL }
 				NOT = { is_subject_of = HOL }
-				any_owned_state = { OR = { region = 159 region = 160 region = 187 region = 188 region = 189 region = 228 region = 229 region = 80 region = 73 } }
+				any_owned_state = { OR = { region = 91 region = 93 region = 158 region = 159 region = 160 region = 167 region = 187 region = 188 region = 189 region = 228 region = 229 } }
 			}
-			ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			HOL = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+		every_country = {
+			every_owned_state = {
+				limit = { OR = { region = 91 region = 93 region = 158 region = 159 region = 160 region = 167 region = 187 region = 188 region = 189 region = 228 region = 229 } }
+				add_core_of = INS
+			}
 		}
 	}
 	completion_reward_joint_member = {
 		add_political_power = 25
-			every_state = { limit = { OR = { region = 159 region = 160 region = 187 region = 188 region = 189 region = 228 region = 229 region = 80 region = 73 } } add_core_of = INS }
+		every_country = {
+			every_owned_state = {
+				limit = { OR = { region = 91 region = 93 region = 158 region = 159 region = 160 region = 167 region = 187 region = 188 region = 189 region = 228 region = 229 } }
+				add_core_of = INS
+			}
+		}
 	}
 }
 
@@ -330,14 +352,25 @@ joint_focus = {
 			limit = {
 				NOT = { tag = HOL }
 				NOT = { is_subject_of = HOL }
-				any_owned_state = { OR = { region = 17 region = 126 region = 127 region = 128 region = 139 region = 140 region = 182 region = 183 region = 184 region = 185 region = 223 region = 224 region = 226 region = 227 region = 271 region = 272 } }
+				any_owned_state = { is_on_continent = africa }
 			}
-			ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			HOL = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+		every_country = {
+			every_owned_state = {
+				limit = { is_on_continent = africa }
+				add_core_of = SAF
+			}
 		}
 	}
 	completion_reward_joint_member = {
 		add_political_power = 25
-			every_state = { limit = { OR = { region = 17 region = 126 region = 127 region = 128 region = 139 region = 140 region = 182 region = 183 region = 184 region = 185 region = 223 region = 224 region = 226 region = 227 region = 271 region = 272 } } add_core_of = SAF }
+		every_country = {
+			every_owned_state = {
+				limit = { is_on_continent = africa }
+				add_core_of = SAF
+			}
+		}
 	}
 }
 

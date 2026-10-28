@@ -1000,6 +1000,8 @@
 # ===== v20 =====
  hol_zaf_koopt_spaans_afrika:0 "Purchase Spain's African Colonies"
  hol_zaf_koopt_spaans_afrika_desc:0 "Offer Madrid a generous sum for its African possessions - Rio de Oro, Spanish Sahara and Spanish Guinea - handing them to the Cape dominion."
+ hol_zaf_koopt_portugees_afrika:0 "Purchase Portugal's African Colonies"
+ hol_zaf_koopt_portugees_afrika_desc:0 "Lisbon has guarded Angola and Mozambique for four centuries. A generous indemnity - and the weight of the Republic's fleet - persuades it to hand them to the Cape dominion, where Dutch law and Dutch capital already reach."
  hol_grondwet_centralistisch_idea:0 "Centralist Constitution"
  hol_grondwet_centralistisch_idea_desc:0 "A strong executive at the Hague, provinces ruled from the centre. Order first, liberty second."
  hol_grondwet_federalistisch_idea:0 "Federal Constitution"

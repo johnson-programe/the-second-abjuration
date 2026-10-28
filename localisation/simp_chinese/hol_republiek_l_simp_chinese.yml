@@ -1000,6 +1000,8 @@
 # ===== v20 =====
  hol_zaf_koopt_spaans_afrika:0 "购买西班牙在非洲的殖民地"
  hol_zaf_koopt_spaans_afrika_desc:0 "向马德里出价，收购其非洲领地——里奥德奥罗、西属撒哈拉与西属几内亚——转交开普领地。"
+ hol_zaf_koopt_portugees_afrika:0 "购买葡萄牙在非洲的殖民地"
+ hol_zaf_koopt_portugees_afrika_desc:0 "里斯本守护安哥拉与莫桑比克已四百年。一笔丰厚的补偿——再加上共和国舰队的威压——使其将这两块殖民地交予开普领地，而荷兰的法律与资本早已渗入其间。"
  hol_grondwet_centralistisch_idea:0 "中央集权宪法"
  hol_grondwet_centralistisch_idea_desc:0 "海牙握有强大行政权，各省由中央统辖。先秩序，后自由。"
  hol_grondwet_federalistisch_idea:0 "联邦宪法"
