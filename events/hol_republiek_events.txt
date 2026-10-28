@@ -1,0 +1,1278 @@
+﻿add_namespace = hol_republiek
+
+# =========================================================
+# 
+# =========================================================
+
+country_event = {
+	id = hol_republiek.20
+	title = hol_republiek.20.t
+	desc = hol_republiek.20.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.20.a
+		add_political_power = 15
+	}
+}
+
+# =========================================================
+#   
+#  +1 =  / -1 = 
+# =========================================================
+
+country_event = {
+	id = hol_republiek.1
+	title = hol_republiek.1.t
+	desc = hol_republiek.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.1.a
+		add_to_variable = { hol_route = -1 }
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_political_power = 25
+		country_event = { id = hol_republiek.2 days = 5 }
+	}
+
+	option = {
+		name = hol_republiek.1.b
+		add_to_variable = { hol_route = 1 }
+		add_stability = 0.03
+		country_event = { id = hol_republiek.2 days = 5 }
+	}
+}
+
+country_event = {
+	id = hol_republiek.2
+	title = hol_republiek.2.t
+	desc = hol_republiek.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.2.a
+		add_to_variable = { hol_route = -1 }
+		add_political_power = 25
+		country_event = { id = hol_republiek.3 days = 5 }
+	}
+
+	option = {
+		name = hol_republiek.2.b
+		add_to_variable = { hol_route = 1 }
+		add_stability = 0.03
+		country_event = { id = hol_republiek.3 days = 5 }
+	}
+}
+
+country_event = {
+	id = hol_republiek.3
+	title = hol_republiek.3.t
+	desc = hol_republiek.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.3.a
+		add_to_variable = { hol_route = -1 }
+		add_war_support = 0.03
+		country_event = { id = hol_republiek.4 days = 3 }
+	}
+
+	option = {
+		name = hol_republiek.3.b
+		add_to_variable = { hol_route = 1 }
+		add_political_power = 25
+		country_event = { id = hol_republiek.4 days = 3 }
+	}
+}
+
+country_event = {
+	id = hol_republiek.4
+	title = hol_republiek.4.t
+	desc = hol_republiek.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.4.a
+		set_country_flag = hol_route_beslist
+		add_power_balance_value = { id = hol_power_balance value = -0.2 }
+		add_ideas = hol_grondwet_centralistisch_idea
+		add_political_power = 50
+	}
+	option = {
+		name = hol_republiek.4.b
+		set_country_flag = hol_route_beslist
+		add_ideas = hol_grondwet_federalistisch_idea
+		add_political_power = 50
+	}
+	option = {
+		name = hol_republiek.4.c
+		set_country_flag = hol_route_beslist
+		add_power_balance_value = { id = hol_power_balance value = 0.2 }
+		add_ideas = hol_grondwet_democratisch_idea
+		add_political_power = 50
+	}
+}
+
+# =========================================================
+# 
+# =========================================================
+
+country_event = {
+	id = hol_republiek.5
+	title = hol_republiek.5.t
+	desc = hol_republiek.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.5.a
+		add_stability = 0.05
+		set_country_flag = hol_wilhelmina_ballingschap
+		if = {
+			limit = { country_exists = ENG }
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = hol_republiek_sympathie
+				}
+			}
+		}
+	}
+}
+
+# =========================================================
+# 
+# =========================================================
+
+country_event = {
+	id = hol_republiek.10
+	title = hol_republiek.10.t
+	desc = hol_republiek.10.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.10.a
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = hol_republiek.11
+	title = hol_republiek.11.t
+	desc = hol_republiek.11.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.11.a
+		add_political_power = 100
+		add_war_support = 0.05
+	}
+}
+
+# =========================================================
+# 
+# =========================================================
+
+country_event = {
+	id = hol_republiek.40
+	title = hol_republiek.40.t
+	desc = hol_republiek.40.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.40.a
+		add_political_power = 25
+		set_country_flag = hol_zuid_afrika_aanbod
+	}
+}
+
+country_event = {
+	id = hol_republiek.41
+	title = hol_republiek.41.t
+	desc = hol_republiek.41.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.41.a
+		add_political_power = 25
+		set_country_flag = hol_wic_octrooi
+	}
+}
+
+# =========================================================
+# Joint colonial affairs
+# =========================================================
+
+country_event = {
+	id = hol_republiek.50
+	title = hol_republiek.50.t
+	desc = hol_republiek.50.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.50.a add_political_power = 25 }
+}
+
+country_event = {
+	id = hol_republiek.51
+	title = hol_republiek.51.t
+	desc = hol_republiek.51.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.51.a add_political_power = 50 }
+}
+
+country_event = {
+	id = hol_republiek.52
+	title = hol_republiek.52.t
+	desc = hol_republiek.52.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.52.a add_stability = 0.03 }
+}
+
+country_event = {
+	id = hol_republiek.60
+	title = hol_republiek.60.t
+	desc = hol_republiek.60.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.60.a add_political_power = 30 }
+}
+
+country_event = {
+	id = hol_republiek.61
+	title = hol_republiek.61.t
+	desc = hol_republiek.61.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.61.a add_stability = 0.02 }
+}
+
+country_event = {
+	id = hol_republiek.62
+	title = hol_republiek.62.t
+	desc = hol_republiek.62.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.62.a add_political_power = 40 }
+}
+
+country_event = {
+	id = hol_republiek.63
+	title = hol_republiek.63.t
+	desc = hol_republiek.63.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.63.a add_war_support = 0.03 }
+}
+
+country_event = {
+	id = hol_republiek.70
+	title = hol_republiek.70.t
+	desc = hol_republiek.70.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.70.a add_political_power = 25 }
+}
+country_event = {
+	id = hol_republiek.71
+	title = hol_republiek.71.t
+	desc = hol_republiek.71.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.71.a add_political_power = 30 }
+}
+country_event = {
+	id = hol_republiek.72
+	title = hol_republiek.72.t
+	desc = hol_republiek.72.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.72.a add_stability = 0.02 }
+}
+country_event = {
+	id = hol_republiek.73
+	title = hol_republiek.73.t
+	desc = hol_republiek.73.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.73.a add_stability = 0.03 }
+}
+country_event = {
+	id = hol_republiek.74
+	title = hol_republiek.74.t
+	desc = hol_republiek.74.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.74.a add_political_power = 40 }
+}
+country_event = {
+	id = hol_republiek.75
+	title = hol_republiek.75.t
+	desc = hol_republiek.75.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.75.a add_stability = 0.03 }
+}
+country_event = {
+	id = hol_republiek.76
+	title = hol_republiek.76.t
+	desc = hol_republiek.76.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.76.a add_research_slot = 1 }
+}
+country_event = {
+	id = hol_republiek.77
+	title = hol_republiek.77.t
+	desc = hol_republiek.77.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.77.a add_political_power = 30 }
+}
+country_event = {
+	id = hol_republiek.78
+	title = hol_republiek.78.t
+	desc = hol_republiek.78.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.78.a add_political_power = 25 }
+}
+country_event = {
+	id = hol_republiek.79
+	title = hol_republiek.79.t
+	desc = hol_republiek.79.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.79.a add_political_power = 25 }
+}
+country_event = {
+	id = hol_republiek.80
+	title = hol_republiek.80.t
+	desc = hol_republiek.80.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.80.a add_political_power = 35 }
+}
+country_event = {
+	id = hol_republiek.81
+	title = hol_republiek.81.t
+	desc = hol_republiek.81.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.81.a add_stability = 0.03 }
+}
+country_event = {
+	id = hol_republiek.82
+	title = hol_republiek.82.t
+	desc = hol_republiek.82.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.82.a add_war_support = 0.05 }
+}
+country_event = {
+	id = hol_republiek.83
+	title = hol_republiek.83.t
+	desc = hol_republiek.83.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.83.a add_stability = 0.05 }
+}
+country_event = {
+	id = hol_republiek.84
+	title = hol_republiek.84.t
+	desc = hol_republiek.84.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.84.a add_war_support = 0.03 }
+}
+country_event = {
+	id = hol_republiek.85
+	title = hol_republiek.85.t
+	desc = hol_republiek.85.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.85.a add_stability = 0.03 }
+}
+country_event = {
+	id = hol_republiek.90
+	title = hol_republiek.90.t
+	desc = hol_republiek.90.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.90.a add_political_power = 15 }
+}
+country_event = {
+	id = hol_republiek.91
+	title = hol_republiek.91.t
+	desc = hol_republiek.91.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.91.a add_war_support = 0.02 }
+}
+country_event = {
+	id = hol_republiek.92
+	title = hol_republiek.92.t
+	desc = hol_republiek.92.d
+	is_triggered_only = yes
+	option = { name = hol_republiek.92.a add_stability = 0.03 }
+}
+
+
+# =========================================================
+# Auto-generated completion events (v14)
+# =========================================================
+
+country_event = {
+	id = hol_republiek.86
+	title = hol_republiek.86.t
+	desc = hol_republiek.86.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.86.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.87
+	title = hol_republiek.87.t
+	desc = hol_republiek.87.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.87.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = hol_republiek.88
+	title = hol_republiek.88.t
+	desc = hol_republiek.88.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.88.a
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = hol_republiek.89
+	title = hol_republiek.89.t
+	desc = hol_republiek.89.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.89.a
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = hol_republiek.93
+	title = hol_republiek.93.t
+	desc = hol_republiek.93.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.93.a
+		add_political_power = 40
+	}
+}
+
+country_event = {
+	id = hol_republiek.94
+	title = hol_republiek.94.t
+	desc = hol_republiek.94.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.94.a
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.95
+	title = hol_republiek.95.t
+	desc = hol_republiek.95.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.95.a
+		add_stability = 0.04
+	}
+}
+
+country_event = {
+	id = hol_republiek.96
+	title = hol_republiek.96.t
+	desc = hol_republiek.96.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.96.a
+		add_manpower = 25000
+	}
+}
+
+country_event = {
+	id = hol_republiek.97
+	title = hol_republiek.97.t
+	desc = hol_republiek.97.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.97.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = hol_republiek.98
+	title = hol_republiek.98.t
+	desc = hol_republiek.98.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.98.a
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = hol_republiek.99
+	title = hol_republiek.99.t
+	desc = hol_republiek.99.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.99.a
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = hol_republiek.100
+	title = hol_republiek.100.t
+	desc = hol_republiek.100.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.100.a
+		add_stability = 0.04
+	}
+}
+
+country_event = {
+	id = hol_republiek.101
+	title = hol_republiek.101.t
+	desc = hol_republiek.101.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.101.a
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = hol_republiek.102
+	title = hol_republiek.102.t
+	desc = hol_republiek.102.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.102.a
+		army_experience = 20
+	}
+}
+
+country_event = {
+	id = hol_republiek.103
+	title = hol_republiek.103.t
+	desc = hol_republiek.103.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.103.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.104
+	title = hol_republiek.104.t
+	desc = hol_republiek.104.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.104.a
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = hol_republiek.105
+	title = hol_republiek.105.t
+	desc = hol_republiek.105.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.105.a
+		add_political_power = 35
+	}
+}
+
+country_event = {
+	id = hol_republiek.106
+	title = hol_republiek.106.t
+	desc = hol_republiek.106.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.106.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.107
+	title = hol_republiek.107.t
+	desc = hol_republiek.107.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.107.a
+		add_political_power = 40
+	}
+}
+
+country_event = {
+	id = hol_republiek.108
+	title = hol_republiek.108.t
+	desc = hol_republiek.108.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.108.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.109
+	title = hol_republiek.109.t
+	desc = hol_republiek.109.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.109.a
+		add_political_power = 35
+	}
+}
+
+country_event = {
+	id = hol_republiek.110
+	title = hol_republiek.110.t
+	desc = hol_republiek.110.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.110.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.111
+	title = hol_republiek.111.t
+	desc = hol_republiek.111.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.111.a
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = hol_republiek.112
+	title = hol_republiek.112.t
+	desc = hol_republiek.112.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.112.a
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = hol_republiek.113
+	title = hol_republiek.113.t
+	desc = hol_republiek.113.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.113.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.114
+	title = hol_republiek.114.t
+	desc = hol_republiek.114.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.114.a
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.115
+	title = hol_republiek.115.t
+	desc = hol_republiek.115.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.115.a
+		add_political_power = 40
+	}
+}
+
+country_event = {
+	id = hol_republiek.116
+	title = hol_republiek.116.t
+	desc = hol_republiek.116.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.116.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = hol_republiek.117
+	title = hol_republiek.117.t
+	desc = hol_republiek.117.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.117.a
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = hol_republiek.118
+	title = hol_republiek.118.t
+	desc = hol_republiek.118.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.118.a
+		add_political_power = 40
+	}
+}
+
+country_event = {
+	id = hol_republiek.160
+	title = hol_republiek.160.t
+	desc = hol_republiek.160.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.160.a
+		add_war_support = 0.05
+	}
+}
+
+country_event = {
+	id = hol_republiek.161
+	title = hol_republiek.161.t
+	desc = hol_republiek.161.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.161.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = hol_republiek.162
+	title = hol_republiek.162.t
+	desc = hol_republiek.162.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.162.a
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = hol_republiek.135
+	title = hol_republiek.135.t
+	desc = hol_republiek.135.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.135.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.136
+	title = hol_republiek.136.t
+	desc = hol_republiek.136.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.136.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.137
+	title = hol_republiek.137.t
+	desc = hol_republiek.137.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.137.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.138
+	title = hol_republiek.138.t
+	desc = hol_republiek.138.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.138.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.139
+	title = hol_republiek.139.t
+	desc = hol_republiek.139.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.139.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.140
+	title = hol_republiek.140.t
+	desc = hol_republiek.140.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.140.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.141
+	title = hol_republiek.141.t
+	desc = hol_republiek.141.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.141.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.142
+	title = hol_republiek.142.t
+	desc = hol_republiek.142.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.142.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.143
+	title = hol_republiek.143.t
+	desc = hol_republiek.143.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.143.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.144
+	title = hol_republiek.144.t
+	desc = hol_republiek.144.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.144.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.145
+	title = hol_republiek.145.t
+	desc = hol_republiek.145.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.145.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.146
+	title = hol_republiek.146.t
+	desc = hol_republiek.146.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.146.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.147
+	title = hol_republiek.147.t
+	desc = hol_republiek.147.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.147.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.148
+	title = hol_republiek.148.t
+	desc = hol_republiek.148.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.148.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.149
+	title = hol_republiek.149.t
+	desc = hol_republiek.149.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.149.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.150
+	title = hol_republiek.150.t
+	desc = hol_republiek.150.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.150.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.151
+	title = hol_republiek.151.t
+	desc = hol_republiek.151.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.151.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.152
+	title = hol_republiek.152.t
+	desc = hol_republiek.152.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.152.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.153
+	title = hol_republiek.153.t
+	desc = hol_republiek.153.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.153.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.154
+	title = hol_republiek.154.t
+	desc = hol_republiek.154.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.154.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.155
+	title = hol_republiek.155.t
+	desc = hol_republiek.155.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.155.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.156
+	title = hol_republiek.156.t
+	desc = hol_republiek.156.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.156.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.157
+	title = hol_republiek.157.t
+	desc = hol_republiek.157.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.157.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.158
+	title = hol_republiek.158.t
+	desc = hol_republiek.158.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.158.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.120
+	title = hol_republiek.120.t
+	desc = hol_republiek.120.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.120.a
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = hol_republiek.121
+	title = hol_republiek.121.t
+	desc = hol_republiek.121.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.121.a
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = hol_republiek.122
+	title = hol_republiek.122.t
+	desc = hol_republiek.122.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.122.a
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = hol_republiek.123
+	title = hol_republiek.123.t
+	desc = hol_republiek.123.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.123.a
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = hol_republiek.124
+	title = hol_republiek.124.t
+	desc = hol_republiek.124.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.124.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.125
+	title = hol_republiek.125.t
+	desc = hol_republiek.125.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.125.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = hol_republiek.126
+	title = hol_republiek.126.t
+	desc = hol_republiek.126.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.126.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.127
+	title = hol_republiek.127.t
+	desc = hol_republiek.127.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.127.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.128
+	title = hol_republiek.128.t
+	desc = hol_republiek.128.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.128.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.129
+	title = hol_republiek.129.t
+	desc = hol_republiek.129.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.129.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.130
+	title = hol_republiek.130.t
+	desc = hol_republiek.130.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.130.a
+		add_political_power = 20
+	}
+}
+
+country_event = {
+	id = hol_republiek.131
+	title = hol_republiek.131.t
+	desc = hol_republiek.131.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.131.a
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = hol_republiek.132
+	title = hol_republiek.132.t
+	desc = hol_republiek.132.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.132.a
+		add_political_power = 20
+	}
+}
+
+country_event = {
+	id = hol_republiek.133
+	title = hol_republiek.133.t
+	desc = hol_republiek.133.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.133.a
+		add_political_power = 25
+	}
+}
+
+# ===== v15 choice & military events =====
+
+country_event = {
+	id = hol_republiek.190
+	title = hol_republiek.190.t
+	desc = hol_republiek.190.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.190.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = hol_republiek.191
+	title = hol_republiek.191.t
+	desc = hol_republiek.191.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.191.a
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.200
+	title = hol_republiek.200.t
+	desc = hol_republiek.200.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.200.a
+		add_war_support = 0.05
+		add_army_experience = 50
+	}
+	option = {
+		name = hol_republiek.200.b
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = hol_republiek.203
+	title = hol_republiek.203.t
+	desc = hol_republiek.203.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.203.a
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = hol_republiek.203.b
+		add_war_support = 0.05
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.204
+	title = hol_republiek.204.t
+	desc = hol_republiek.204.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.204.a
+		add_stability = 0.05
+		add_political_power = 30
+	}
+	option = {
+		name = hol_republiek.204.b
+		add_war_support = 0.05
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = hol_republiek.205
+	title = hol_republiek.205.t
+	desc = hol_republiek.205.d
+	is_triggered_only = yes
+
+	option = {
+		name = hol_republiek.205.a
+		add_political_power = -25
+		add_stability = 0.05
+	}
+	option = {
+		name = hol_republiek.205.b
+		add_political_power = 25
+	}
+}

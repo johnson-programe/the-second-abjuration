@@ -1,0 +1,444 @@
+﻿### The Second Abjuration - joint focuses v21 (both-party buffs, strong military)
+
+joint_focus = {
+	id = hol_joint_raad
+	icon = GFX_goal_generic_major_alliance
+	x = 52
+	y = 10
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 50
+		add_stability = 0.05
+		add_ideas = hol_koloniaal_kracht_idea
+		country_event = hol_republiek.203
+	}
+	completion_reward_joint_member = {
+		add_political_power = 50
+		add_stability = 0.05
+		add_ideas = hol_koloniaal_kracht_idea
+	}
+}
+
+joint_focus = {
+	id = hol_joint_sur
+	icon = GFX_goal_generic_major_alliance
+	x = -10
+	y = 2
+	relative_position_id = hol_joint_raad
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_raad
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 30
+		add_stability = 0.02
+		add_to_variable = { var = hol_sur_gehoorzaamheid value = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 30
+		add_stability = 0.02
+		add_to_variable = { var = hol_sur_gehoorzaamheid value = 1 }
+	}
+}
+
+joint_focus = {
+	id = hol_sur_expansie
+	icon = GFX_goal_generic_position_armies
+	x = -1
+	y = 2
+	relative_position_id = hol_joint_sur
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_sur
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		every_country = {
+			limit = {
+				NOT = { tag = HOL }
+				NOT = { is_subject_of = HOL }
+				any_owned_state = { OR = { region = 35 region = 124 region = 125 region = 288 region = 163 region = 280 region = 34 region = 53 } }
+			}
+			ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+			every_state = { limit = { OR = { region = 35 region = 124 region = 125 region = 288 region = 163 region = 280 region = 34 region = 53 } } add_core_of = SUR }
+	}
+}
+
+joint_focus = {
+	id = hol_sur_industrie
+	icon = GFX_goal_generic_position_armies
+	x = 0
+	y = 2
+	relative_position_id = hol_joint_sur
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_sur
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_ideas = hol_koloniaal_kracht_idea
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_ideas = hol_koloniaal_kracht_idea
+		random_owned_state = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+}
+
+joint_focus = {
+	id = hol_sur_militair
+	icon = GFX_goal_generic_position_armies
+	x = 1
+	y = 2
+	relative_position_id = hol_joint_sur
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_sur
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_army_experience = 35
+		add_ideas = hol_koloniaal_leger_idea
+		add_tech_bonus = { name = sur_militair bonus = 0.5 uses = 1 category = land_doctrine }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_army_experience = 35
+		add_ideas = hol_koloniaal_leger_idea
+		add_tech_bonus = { name = sur_militair bonus = 0.5 uses = 1 category = land_doctrine }
+	}
+}
+
+joint_focus = {
+	id = hol_sur_politiek
+	icon = GFX_goal_generic_position_armies
+	x = 2
+	y = 2
+	relative_position_id = hol_joint_sur
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_sur
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_stability = 0.04
+		add_to_variable = { var = hol_sur_gehoorzaamheid value = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_stability = 0.04
+	}
+}
+
+joint_focus = {
+	id = hol_joint_ins
+	icon = GFX_goal_generic_major_alliance
+	x = 0
+	y = 2
+	relative_position_id = hol_joint_raad
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_raad
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 30
+		add_stability = 0.02
+		add_to_variable = { var = hol_ins_gehoorzaamheid value = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 30
+		add_stability = 0.02
+		add_to_variable = { var = hol_ins_gehoorzaamheid value = 1 }
+	}
+}
+
+joint_focus = {
+	id = hol_ins_expansie
+	icon = GFX_goal_generic_position_armies
+	x = -1
+	y = 2
+	relative_position_id = hol_joint_ins
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_ins
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		every_country = {
+			limit = {
+				NOT = { tag = HOL }
+				NOT = { is_subject_of = HOL }
+				any_owned_state = { OR = { region = 159 region = 160 region = 187 region = 188 region = 189 region = 228 region = 229 region = 80 region = 73 } }
+			}
+			ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+			every_state = { limit = { OR = { region = 159 region = 160 region = 187 region = 188 region = 189 region = 228 region = 229 region = 80 region = 73 } } add_core_of = INS }
+	}
+}
+
+joint_focus = {
+	id = hol_ins_industrie
+	icon = GFX_goal_generic_position_armies
+	x = 0
+	y = 2
+	relative_position_id = hol_joint_ins
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_ins
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_ideas = hol_koloniaal_kracht_idea
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_ideas = hol_koloniaal_kracht_idea
+		random_owned_state = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+}
+
+joint_focus = {
+	id = hol_ins_militair
+	icon = GFX_goal_generic_position_armies
+	x = 1
+	y = 2
+	relative_position_id = hol_joint_ins
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_ins
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_army_experience = 35
+		add_ideas = hol_koloniaal_leger_idea
+		add_tech_bonus = { name = ins_militair bonus = 0.5 uses = 1 category = land_doctrine }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_army_experience = 35
+		add_ideas = hol_koloniaal_leger_idea
+		add_tech_bonus = { name = ins_militair bonus = 0.5 uses = 1 category = land_doctrine }
+	}
+}
+
+joint_focus = {
+	id = hol_ins_politiek
+	icon = GFX_goal_generic_position_armies
+	x = 2
+	y = 2
+	relative_position_id = hol_joint_ins
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_ins
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_stability = 0.04
+		add_to_variable = { var = hol_ins_gehoorzaamheid value = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_stability = 0.04
+	}
+}
+
+joint_focus = {
+	id = hol_joint_saf
+	icon = GFX_goal_generic_major_alliance
+	x = 10
+	y = 2
+	relative_position_id = hol_joint_raad
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_raad
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 30
+		add_stability = 0.02
+		add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 30
+		add_stability = 0.02
+		add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
+	}
+}
+
+joint_focus = {
+	id = hol_saf_expansie
+	icon = GFX_goal_generic_position_armies
+	x = -1
+	y = 2
+	relative_position_id = hol_joint_saf
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_saf
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		every_country = {
+			limit = {
+				NOT = { tag = HOL }
+				NOT = { is_subject_of = HOL }
+				any_owned_state = { OR = { region = 17 region = 126 region = 127 region = 128 region = 139 region = 140 region = 182 region = 183 region = 184 region = 185 region = 223 region = 224 region = 226 region = 227 region = 271 region = 272 } }
+			}
+			ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+			every_state = { limit = { OR = { region = 17 region = 126 region = 127 region = 128 region = 139 region = 140 region = 182 region = 183 region = 184 region = 185 region = 223 region = 224 region = 226 region = 227 region = 271 region = 272 } } add_core_of = SAF }
+	}
+}
+
+joint_focus = {
+	id = hol_saf_industrie
+	icon = GFX_goal_generic_position_armies
+	x = 0
+	y = 2
+	relative_position_id = hol_joint_saf
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_saf
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_ideas = hol_koloniaal_kracht_idea
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_ideas = hol_koloniaal_kracht_idea
+		random_owned_state = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+}
+
+joint_focus = {
+	id = hol_saf_militair
+	icon = GFX_goal_generic_position_armies
+	x = 1
+	y = 2
+	relative_position_id = hol_joint_saf
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_saf
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_army_experience = 35
+		add_ideas = hol_koloniaal_leger_idea
+		add_tech_bonus = { name = saf_militair bonus = 0.5 uses = 1 category = land_doctrine }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_army_experience = 35
+		add_ideas = hol_koloniaal_leger_idea
+		add_tech_bonus = { name = saf_militair bonus = 0.5 uses = 1 category = land_doctrine }
+	}
+}
+
+joint_focus = {
+	id = hol_saf_politiek
+	icon = GFX_goal_generic_position_armies
+	x = 2
+	y = 2
+	relative_position_id = hol_joint_saf
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_saf
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 25
+		add_stability = 0.04
+		add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
+	}
+	completion_reward_joint_member = {
+		add_political_power = 25
+		add_stability = 0.04
+	}
+}
+
+joint_focus = {
+	id = hol_joint_rijksbezit
+	icon = GFX_goal_generic_major_alliance
+	x = 0
+	y = 6
+	relative_position_id = hol_joint_raad
+	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	cost = 4.3
+	available = {
+		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
+		has_completed_focus = hol_joint_sur
+	}
+	completion_reward = { }
+	completion_reward_joint_originator = {
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+

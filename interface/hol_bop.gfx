@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bop_hol_regent_side"
+		texturefile = "gfx/interface/focusview/filter/balance_of_power_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_bop_hol_volk_side"
+		texturefile = "gfx/interface/focusview/filter/balance_of_power_icon.dds"
+	}
+}

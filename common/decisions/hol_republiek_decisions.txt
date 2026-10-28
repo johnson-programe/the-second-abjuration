@@ -1,0 +1,634 @@
+# =========================================================
+# NATIONAL DEVELOPMENT - 60 days + 1 civilian factory for 3 building slots
+# =========================================================
+
+hol_ontwikkeling = {
+	hol_develop_slots = {
+		icon = GFX_decision_generic_construction
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 60
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			country_event = hol_republiek.90
+
+			FROM = { add_extra_state_shared_building_slots = 3 }
+		}
+		ai_will_do = { base = 20 }
+	}
+
+	hol_develop_oil = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 60
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			country_event = hol_republiek.120
+			FROM = { add_resource = { type = oil amount = 6 } }
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_develop_steel = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 60
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			country_event = hol_republiek.121
+			FROM = { add_resource = { type = steel amount = 6 } }
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_develop_aluminium = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 60
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			country_event = hol_republiek.122
+			FROM = { add_resource = { type = aluminium amount = 6 } }
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+# =========================================================
+# COLONIAL CONTROL
+# =========================================================
+
+hol_onderdrukking = {
+	hol_koloniaal_beroep = {
+		icon = GFX_decision_generic_military
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_expand_the_colonial_army }
+		available = { has_war = yes }
+		days_remove = 30
+		cost = 25
+		complete_effect = {
+			country_event = hol_republiek.123
+			add_manpower = 50000
+			add_war_support = 0.02
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_politiestaat = {
+		icon = GFX_decision_generic_protection
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_expand_the_colonial_army }
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			country_event = hol_republiek.124
+			add_war_support = 0.05
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+# =========================================================
+# LOST FACTORIES
+# =========================================================
+
+hol_claims = {
+	hol_claim_portugal = {
+		icon = GFX_decision_generic_form_nation
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_verloren_factorijen }
+		cost = 150
+		fire_only_once = yes
+		available = {
+			country_exists = POR
+			country_exists = SAF
+			NOT = { has_war_with = POR }
+			POR = { is_at_war = no }
+		}
+		complete_effect = {
+			add_to_variable = { var = hol_saf_gehoorzaamheid value = -1 }
+			country_event = hol_republiek.91
+
+			POR = {
+				every_owned_state = {
+					limit = { NOT = { is_on_continent = europe } }
+					SAF = {
+						add_state_core = PREV
+						transfer_state = PREV
+					}
+				}
+			}
+			country_event = hol_republiek.63
+			add_political_power = -50
+			add_war_support = 0.02
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_claim_handel = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_verloren_factorijen }
+		cost = 40
+		fire_only_once = yes
+		complete_effect = {
+			country_event = hol_republiek.125
+			add_political_power = 50
+			add_offsite_building = { type = dockyard level = 1 }
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+# =========================================================
+# COLONIAL INTEGRATION - cores go to the companies, not the metropole
+# =========================================================
+
+hol_integratie = {
+	hol_kern_amerika = {
+		icon = GFX_decision_generic_form_nation
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_latijns_amerika }
+		cost = 75
+		fire_only_once = yes
+		available = {
+			country_exists = SUR
+			any_owned_state = {
+				is_on_continent = south_america
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		complete_effect = {
+			country_event = hol_republiek.92
+
+			every_owned_state = {
+				limit = {
+					is_on_continent = south_america
+					NOT = { is_core_of = ROOT }
+				}
+				SUR = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+			add_stability = 0.05
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+# =========================================================
+# GOVERNORATE REFORM
+# =========================================================
+
+hol_vazal_integratie = {
+	hol_organiseer_vazallen = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_guiana_vazal }
+		cost = 50
+		available = {
+			any_country = { is_subject_of = ROOT }
+		}
+		complete_effect = {
+			country_event = hol_republiek.126
+			every_country = {
+				limit = { is_subject_of = ROOT }
+				add_ideas = hol_vazal_staat_idea
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_political_power = 25
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+# =========================================================
+# PURCHASE THE GUIANAS
+# =========================================================
+
+hol_guiana_aankoop = {
+	hol_koop_guiana = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_guiana }
+		cost = 150
+		fire_only_once = yes
+		available = {
+			country_exists = ENG
+			country_exists = SUR
+			NOT = { has_war_with = ENG }
+		}
+		complete_effect = {
+			country_event = hol_republiek.127
+			ENG = {
+				every_owned_state = {
+					limit = { is_on_continent = south_america }
+					SUR = {
+						add_state_core = PREV
+						transfer_state = PREV
+					}
+				}
+			}
+			if = { limit = { country_exists = SUR } SUR = { set_cosmetic_tag = HOL_WI } }
+			add_political_power = -50
+			add_stability = -0.03
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_koop_frans_guiana = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_guiana }
+		cost = 100
+		fire_only_once = yes
+		available = {
+			country_exists = FRA
+			country_exists = SUR
+			NOT = { has_war_with = FRA }
+		}
+		complete_effect = {
+			country_event = hol_republiek.128
+			FRA = {
+				every_owned_state = {
+					limit = { is_on_continent = south_america }
+					SUR = {
+						add_state_core = PREV
+						transfer_state = PREV
+					}
+				}
+			}
+			if = { limit = { country_exists = SUR } SUR = { set_cosmetic_tag = HOL_WI } }
+			add_political_power = -25
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+# =========================================================
+# UNION OF THE LOW COUNTRIES
+# =========================================================
+
+hol_lage_landen = {
+	hol_annex_luxemburg = {
+		icon = GFX_decision_generic_form_nation
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_zeventien }
+		cost = 100
+		fire_only_once = yes
+		available = {
+			country_exists = LUX
+			NOT = { has_war_with = LUX }
+			LUX = { is_at_war = no }
+		}
+		complete_effect = {
+			country_event = hol_republiek.129
+			annex_country = { target = LUX transfer_troops = yes }
+			add_stability = 0.03
+		}
+		ai_will_do = { base = 20 }
+	}
+
+	hol_annex_belgie = {
+		icon = GFX_decision_generic_form_nation
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_zeventien }
+		cost = 150
+		fire_only_once = yes
+		available = {
+			country_exists = BEL
+			NOT = { has_war_with = BEL }
+			BEL = { is_at_war = no }
+		}
+		complete_effect = {
+			annex_country = { target = BEL transfer_troops = yes }
+			release_puppet = COG
+			if = {
+				limit = { country_exists = COG }
+				COG = {
+					add_ideas = hol_vazal_staat_idea
+					set_autonomy = { target = COG autonomous_state = autonomy_colony }
+				}
+			}
+			country_event = hol_republiek.204
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_broederrepubliek = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { always = yes }
+		cost = 50
+		available = {
+			OR = {
+				FRA = { is_subject_of = HOL }
+				ENG = { is_subject_of = HOL }
+				RHE = { is_subject_of = HOL }
+			}
+		}
+		complete_effect = {
+			if = { limit = { FRA = { is_subject_of = HOL } } set_autonomy = { target = FRA autonomous_state = hol_brother_republic } }
+			if = { limit = { ENG = { is_subject_of = HOL } } set_autonomy = { target = ENG autonomous_state = hol_brother_republic } }
+			if = { limit = { RHE = { is_subject_of = HOL } } set_autonomy = { target = RHE autonomous_state = hol_brother_republic } }
+		}
+	}
+}
+
+# =========================================================
+# FOUND THE WEST INDIA COMPANY GOVERNORATE
+# =========================================================
+
+hol_wic_stichten = {
+	hol_sticht_wic = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { always = yes }
+		cost = 100
+		fire_only_once = yes
+		available = {
+			NOT = { country_exists = SUR }
+		}
+		complete_effect = {
+			release_puppet = SUR
+			set_autonomy = { target = SUR autonomous_state = autonomy_colony }
+			if = {
+				limit = { country_exists = SUR }
+				SUR = {
+					set_cosmetic_tag = HOL_WI
+					set_politics = { ruling_party = neutrality elections_allowed = no }
+					add_popularity = { ideology = neutrality popularity = 0.60 }
+					add_ideas = hol_vazal_staat_idea
+					695 = { set_state_owner = SUR }
+					recruit_character = SUR_wic_gouverneur
+					promote_character = SUR_wic_gouverneur
+				}
+			}
+			add_political_power = -50
+			country_event = hol_republiek.205
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+# =========================================================
+# PURCHASE SOUTH AFRICA
+# =========================================================
+
+hol_zuid_afrika_koop = {
+	hol_koop_zuid_afrika = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_zuid_afrika }
+		cost = 200
+		fire_only_once = yes
+		available = {
+			country_exists = SAF
+			NOT = { has_war_with = SAF }
+			SAF = { is_at_war = no }
+			has_country_flag = hol_zuid_afrika_aanbod
+		}
+		complete_effect = {
+			puppet = SAF
+			set_autonomy = { target = SAF autonomous_state = autonomy_colony }
+			SAF = {
+				set_cosmetic_tag = HOL_AFRICA
+				add_ideas = hol_vazal_staat_idea
+				add_ideas = hol_vazal_staat_idea
+			}
+			country_event = hol_republiek.62
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_political_power = -100
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+# =========================================================
+# METROPOLE - COLONY INTERACTION
+# =========================================================
+
+hol_koloniaal_bestuur = {
+	hol_indie_requisitie = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_indische_federatie }
+		available = { country_exists = INS }
+		days_remove = 90
+		cost = 40
+		complete_effect = {
+			add_to_variable = { var = hol_ins_gehoorzaamheid value = -1 }
+			country_event = hol_republiek.130
+			add_offsite_building = { type = industrial_complex level = 1 }
+			if = { limit = { country_exists = INS } INS = { add_opinion_modifier = { target = ROOT modifier = hol_republiek_sympathie } } }
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_indie_troepen = {
+		icon = GFX_decision_generic_military
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_indische_federatie }
+		available = {
+			country_exists = INS
+			has_war = yes
+		}
+		days_remove = 60
+		cost = 30
+		complete_effect = {
+			country_event = hol_republiek.131
+			add_manpower = 50000
+			add_war_support = 0.02
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_wic_olie = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = hol_wic }
+		available = { country_exists = SUR }
+		days_remove = 90
+		cost = 30
+		complete_effect = {
+			add_to_variable = { var = hol_sur_gehoorzaamheid value = -1 }
+			country_event = hol_republiek.132
+			add_offsite_building = { type = industrial_complex level = 1 }
+			if = { limit = { country_exists = SUR } SUR = { add_opinion_modifier = { target = ROOT modifier = hol_republiek_sympathie } } }
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_gouverneur_ontslag = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = {
+			OR = {
+				country_exists = SUR
+				country_exists = INS
+			}
+		}
+		cost = 25
+		complete_effect = {
+			country_event = hol_republiek.133
+			if = {
+				limit = { country_exists = SUR }
+				SUR = { add_autonomy_ratio = { value = -0.08 localization = hol_autonomy_tt } }
+			}
+			if = {
+				limit = { country_exists = INS }
+				INS = { add_autonomy_ratio = { value = -0.08 localization = hol_autonomy_tt } }
+			}
+			if = {
+				limit = { country_exists = SAF }
+				SAF = { add_autonomy_ratio = { value = -0.08 localization = hol_autonomy_tt } }
+			}
+			add_political_power = 25
+		}
+		ai_will_do = { base = 5 }
+	}
+	hol_sur_investeren = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SUR }
+		cost = 50
+		days_remove = 90
+		available = { check_variable = { hol_sur_gehoorzaamheid < 10 } }
+		complete_effect = {
+			add_to_variable = { var = hol_sur_gehoorzaamheid value = 1 }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -500 }
+		}
+	}
+	hol_sur_uitbuiting = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SUR }
+		cost = 0
+		days_remove = 180
+		available = { check_variable = { hol_sur_gehoorzaamheid > 0 } }
+		complete_effect = {
+			add_to_variable = { var = hol_sur_gehoorzaamheid value = -1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_manpower = 5000
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 }
+		}
+	}
+	hol_ins_investeren = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { country_exists = INS }
+		cost = 50
+		days_remove = 90
+		available = { check_variable = { hol_ins_gehoorzaamheid < 10 } }
+		complete_effect = {
+			add_to_variable = { var = hol_ins_gehoorzaamheid value = 1 }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -500 }
+		}
+	}
+	hol_ins_uitbuiting = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { country_exists = INS }
+		cost = 0
+		days_remove = 180
+		available = { check_variable = { hol_ins_gehoorzaamheid > 0 } }
+		complete_effect = {
+			add_to_variable = { var = hol_ins_gehoorzaamheid value = -1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_manpower = 5000
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 }
+		}
+	}
+	hol_saf_investeren = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SAF }
+		cost = 50
+		days_remove = 90
+		available = { check_variable = { hol_saf_gehoorzaamheid < 10 } }
+		complete_effect = {
+			add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -500 }
+		}
+	}
+	hol_saf_uitbuiting = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SAF }
+		cost = 0
+		days_remove = 180
+		available = { check_variable = { hol_saf_gehoorzaamheid > 0 } }
+		complete_effect = {
+			add_to_variable = { var = hol_saf_gehoorzaamheid value = -1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_manpower = 5000
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 }
+		}
+	}
+	hol_zaf_congo = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { country_exists = COG }
+		cost = 50
+		fire_only_once = yes
+		available = { country_exists = COG SAF = { is_subject_of = HOL } }
+		complete_effect = {
+			SAF = { annex_country = { target = COG transfer_troops = yes } }
+		}
+	}
+	hol_zaf_koopt_spaans_afrika = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SPR country_exists = SAF }
+		cost = 150
+		fire_only_once = yes
+		available = {
+			country_exists = SPR
+			SAF = { is_subject_of = HOL }
+			has_political_power > 150
+		}
+		complete_effect = {
+			SPR = {
+				every_owned_state = {
+					limit = { OR = { region = 17 region = 126 region = 127 region = 128 region = 139 region = 140 region = 182 region = 183 region = 184 region = 185 region = 223 region = 224 region = 226 region = 227 region = 271 region = 272 } }
+					transfer_state = SAF
+				}
+			}
+			SAF = {
+				every_owned_state = {
+					limit = { OR = { region = 17 region = 126 region = 127 region = 128 region = 139 region = 140 region = 182 region = 183 region = 184 region = 185 region = 223 region = 224 region = 226 region = 227 region = 271 region = 272 } }
+					add_core_of = SAF
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+characters = {
+
+	# Regent republic - Grand Pensionary (oligarch)
+	HOL_van_beuningen = {
+		name = HOL_van_beuningen
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_hol_petrus_wilhelmus_best"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+
+	# Batavian republic - Grand Pensionary (social democrat)
+	HOL_albarda = {
+		name = HOL_albarda
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_hol_wim_schermerhorn"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+
+	# West India Company governorate - Governor-General
+	SUR_wic_gouverneur = {
+		name = SUR_wic_gouverneur
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_hol_johannes_theodorus_furstner"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+}

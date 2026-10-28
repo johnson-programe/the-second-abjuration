@@ -1,0 +1,131 @@
+hol_ontwikkeling = {
+	icon = GFX_decision_category_generic_industry
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		has_completed_focus = HOL_continue_the_public_works
+	}
+}
+
+hol_onderdrukking = {
+	icon = GFX_decision_category_generic_crisis
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		has_completed_focus = HOL_expand_the_colonial_army
+	}
+}
+
+hol_claims = {
+	icon = GFX_decision_category_generic_foreign_policy
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		has_completed_focus = hol_verloren_factorijen
+	}
+}
+
+hol_integratie = {
+	icon = GFX_decision_category_generic_formable_nations
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		has_completed_focus = hol_latijns_amerika
+	}
+}
+
+hol_vazal_integratie = {
+	icon = GFX_decision_category_generic_foreign_policy
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		has_completed_focus = hol_guiana_vazal
+	}
+}
+
+hol_guiana_aankoop = {
+	icon = GFX_decision_category_generic_foreign_policy
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		has_completed_focus = hol_guiana
+	}
+}
+
+hol_lage_landen = {
+	icon = GFX_decision_category_generic_foreign_policy
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		has_completed_focus = hol_zeventien
+	}
+}
+
+hol_wic_stichten = {
+	icon = GFX_decision_category_generic_naval
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		always = yes
+	}
+}
+
+hol_zuid_afrika_koop = {
+	icon = GFX_decision_category_generic_foreign_policy
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		has_completed_focus = hol_zuid_afrika
+	}
+}
+
+hol_koloniaal_bestuur = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		OR = { has_completed_focus = hol_wic has_completed_focus = hol_indische_federatie }
+	}
+}
+
+hol_macht_balans = {
+	icon = GFX_decision_category_generic_crisis
+	priority = 50
+	visible_when_empty = no
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		OR = { has_country_flag = hol_route_bataafs_flag has_country_flag = hol_route_regent_flag }
+	}
+}

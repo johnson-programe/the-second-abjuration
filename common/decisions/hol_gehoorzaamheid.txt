@@ -1,0 +1,24 @@
+hol_macht_balans = {
+
+	hol_balans_regent = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { always = yes }
+		cost = 25
+		available = { check_variable = { hol_macht_balans > 0 } }
+		complete_effect = {
+			add_power_balance_value = { id = hol_power_balance value = -0.1 }
+		}
+	}
+
+	hol_balans_volk = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { always = yes }
+		cost = 25
+		available = { check_variable = { hol_macht_balans < 100 } }
+		complete_effect = {
+			add_power_balance_value = { id = hol_power_balance value = 0.1 }
+		}
+	}
+}

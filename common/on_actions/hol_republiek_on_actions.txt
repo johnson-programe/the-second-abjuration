@@ -1,0 +1,50 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			if = {
+				limit = { NOT = { has_global_flag = hol_republiek_init } }
+				set_global_flag = hol_republiek_init
+				HOL = {
+					set_variable = { hol_route = 0 }
+					set_variable = { hol_republikeinse_druk = 0 }
+					set_variable = { hol_sur_gehoorzaamheid = 7 }
+					set_variable = { hol_ins_gehoorzaamheid = 7 }
+					set_variable = { hol_saf_gehoorzaamheid = 7 }
+					set_variable = { hol_macht_balans = 50 }
+					set_power_balance = { id = hol_power_balance left_side = hol_regent_side right_side = hol_volk_side }
+				}
+			}
+		}
+	}
+
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { original_tag = HOL }
+				# West Indies independence at 0 obedience
+				if = {
+					limit = {
+						check_variable = { hol_sur_gehoorzaamheid < 1 }
+						SUR = { is_subject_of = HOL }
+					}
+					set_autonomy = { target = SUR autonomous_state = autonomy_free }
+				}
+				if = {
+					limit = {
+						check_variable = { hol_ins_gehoorzaamheid < 1 }
+						INS = { is_subject_of = HOL }
+					}
+					set_autonomy = { target = INS autonomous_state = autonomy_free }
+				}
+				if = {
+					limit = {
+						check_variable = { hol_saf_gehoorzaamheid < 1 }
+						SAF = { is_subject_of = HOL }
+					}
+					set_autonomy = { target = SAF autonomous_state = autonomy_free }
+				}
+			}
+		}
+	}
+}

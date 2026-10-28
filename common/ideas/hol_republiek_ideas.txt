@@ -1,0 +1,430 @@
+ideas = {
+	country = {
+
+		hol_kroon_spanning_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				political_power_gain = -0.15
+				democratic_drift = 0.02
+				stability_factor = 0.05
+			}
+		}
+
+		hol_republiek_geboren_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				war_support_factor = 0.05
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+		hol_zeven_provincien_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+
+		hol_route_regent_idea = {
+			picture = INS_bank_of_java
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.20
+				consumer_goods_factor = -0.10
+				political_power_gain = 0.25
+				stability_factor = 0.10
+				trade_opinion_factor = 0.25
+				research_speed_factor = 0.05
+			}
+		}
+
+		hol_compagnie_staat_idea = {
+			picture = INS_bank_of_java
+			modifier = {
+				industrial_capacity_factory = 0.10
+				local_resources_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		hol_route_bataafs_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				industrial_capacity_factory = 0.12
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				recruitable_population_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = 0.15
+				stability_factor = 0.05
+			}
+		}
+
+		hol_zuilen_vallen_idea = {
+			picture = INS_volksraad
+			modifier = {
+				research_speed_factor = 0.10
+				stability_factor = 0.08
+				political_power_gain = 0.10
+			}
+		}
+
+		hol_groot_oost_indie_idea = {
+			picture = INS_dutch_east_indies
+			modifier = {
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.08
+				war_support_factor = 0.05
+			}
+		}
+
+		hol_wic_idea = {
+			picture = INS_bangka_bauxite_export
+			modifier = {
+				local_resources_factor = 0.10
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		hol_scheuring_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				war_support_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		hol_zeventien_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+		hol_verenigde_nederlanden_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				industrial_capacity_factory = 0.15
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				research_speed_factor = 0.05
+			}
+		}
+
+		hol_vazal_staat_idea = {
+			picture = hol_oranje_boven
+			modifier = {
+				local_resources_factor = 0.25
+				industrial_capacity_factory = 0.10
+				compliance_gain = 0.15
+				stability_factor = 0.05
+			}
+		}
+
+		hol_bourgondie_idea = {
+			picture = hol_oranje_boven
+			modifier = {
+				industrial_capacity_factory = 0.10
+				local_resources_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		hol_koloniaal_dividend_idea = {
+			picture = hol_gateway_to_europe
+			modifier = {
+				industrial_capacity_factory = 0.06
+				local_resources_factor = 0.08
+			}
+		}
+
+		hol_holland_idea = {
+			picture = INS_bank_of_java
+			modifier = {
+				industrial_capacity_factory = 0.06
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		hol_gelderland_idea = {
+			picture = hol_the_foundations_of_defense
+			modifier = {
+				local_resources_factor = 0.10
+				recruitable_population_factor = 0.05
+			}
+		}
+
+		hol_friesland_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				consumer_goods_factor = -0.03
+				recruitable_population_factor = 0.05
+			}
+		}
+	
+		hol_weermacht_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				experience_gain_army_factor = 0.10
+				training_time_factor = -0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		hol_koloniaal_kracht_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		hol_koloniaal_kracht_idea_2 = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		hol_koloniaal_kracht_idea_3 = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		hol_koloniaal_kracht_idea_4 = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.2
+				stability_factor = 0.05
+			}
+		}
+
+		hol_grondwet_centralistisch_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+		hol_grondwet_federalistisch_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				stability_factor = 0.10
+				research_speed_factor = 0.03
+			}
+		}
+
+		hol_grondwet_democratisch_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				war_support_factor = 0.05
+				political_power_gain = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+		hol_zeventien_idea_2 = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.07
+			}
+		}
+
+		hol_zeventien_idea_3 = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = 0.10
+			}
+		}
+
+		hol_zeventien_idea_4 = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.12
+			}
+		}
+
+		hol_koloniaal_leger_idea = {
+			picture = hol_shell_shocked_spectator
+			modifier = {
+				army_attack_factor = 0.15
+				breakthrough_factor = 0.15
+				army_strength_factor = 0.15
+				army_org_factor = 0.10
+			}
+		}
+
+		hol_compagnie_staat_idea_2 = {
+			picture = INS_bank_of_java
+			modifier = {
+				industrial_capacity_factory = 0.15
+				local_resources_factor = 0.225
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		hol_compagnie_staat_idea_3 = {
+			picture = INS_bank_of_java
+			modifier = {
+				industrial_capacity_factory = 0.2
+				local_resources_factor = 0.3
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		hol_compagnie_staat_idea_4 = {
+			picture = INS_bank_of_java
+			modifier = {
+				industrial_capacity_factory = 0.25
+				local_resources_factor = 0.375
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		hol_zuilen_vallen_idea_2 = {
+			picture = INS_volksraad
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = 0.12
+				political_power_gain = 0.15
+			}
+		}
+
+		hol_zuilen_vallen_idea_3 = {
+			picture = INS_volksraad
+			modifier = {
+				research_speed_factor = 0.2
+				stability_factor = 0.16
+				political_power_gain = 0.2
+			}
+		}
+
+		hol_zuilen_vallen_idea_4 = {
+			picture = INS_volksraad
+			modifier = {
+				research_speed_factor = 0.25
+				stability_factor = 0.2
+				political_power_gain = 0.25
+			}
+		}
+
+		hol_koloniaal_dividend_idea_2 = {
+			picture = hol_gateway_to_europe
+			modifier = {
+				industrial_capacity_factory = 0.09
+				local_resources_factor = 0.12
+			}
+		}
+
+		hol_koloniaal_dividend_idea_3 = {
+			picture = hol_gateway_to_europe
+			modifier = {
+				industrial_capacity_factory = 0.12
+				local_resources_factor = 0.16
+			}
+		}
+
+		hol_koloniaal_dividend_idea_4 = {
+			picture = hol_gateway_to_europe
+			modifier = {
+				industrial_capacity_factory = 0.15
+				local_resources_factor = 0.2
+			}
+		}
+
+		hol_wic_idea_2 = {
+			picture = INS_bangka_bauxite_export
+			modifier = {
+				local_resources_factor = 0.15
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		hol_wic_idea_3 = {
+			picture = INS_bangka_bauxite_export
+			modifier = {
+				local_resources_factor = 0.2
+				trade_opinion_factor = 0.2
+			}
+		}
+
+		hol_wic_idea_4 = {
+			picture = INS_bangka_bauxite_export
+			modifier = {
+				local_resources_factor = 0.25
+				trade_opinion_factor = 0.25
+			}
+		}
+
+		hol_vazal_staat_idea_2 = {
+			picture = hol_oranje_boven
+			modifier = {
+				local_resources_factor = 0.375
+				industrial_capacity_factory = 0.15
+				compliance_gain = 0.225
+				stability_factor = 0.075
+			}
+		}
+
+		hol_vazal_staat_idea_3 = {
+			picture = hol_oranje_boven
+			modifier = {
+				local_resources_factor = 0.5
+				industrial_capacity_factory = 0.2
+				compliance_gain = 0.3
+				stability_factor = 0.1
+			}
+		}
+
+		hol_vazal_staat_idea_4 = {
+			picture = hol_oranje_boven
+			modifier = {
+				local_resources_factor = 0.625
+				industrial_capacity_factory = 0.25
+				compliance_gain = 0.375
+				stability_factor = 0.125
+			}
+		}
+
+		hol_groot_oost_indie_idea_2 = {
+			picture = INS_dutch_east_indies
+			modifier = {
+				local_resources_factor = 0.225
+				industrial_capacity_factory = 0.12
+				war_support_factor = 0.075
+			}
+		}
+
+		hol_groot_oost_indie_idea_3 = {
+			picture = INS_dutch_east_indies
+			modifier = {
+				local_resources_factor = 0.3
+				industrial_capacity_factory = 0.16
+				war_support_factor = 0.1
+			}
+		}
+
+		hol_groot_oost_indie_idea_4 = {
+			picture = INS_dutch_east_indies
+			modifier = {
+				local_resources_factor = 0.375
+				industrial_capacity_factory = 0.2
+				war_support_factor = 0.125
+			}
+		}
+}
+}

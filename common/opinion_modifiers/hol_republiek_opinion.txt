@@ -1,0 +1,4 @@
+hol_republiek_sympathie = {
+	value = 25
+	decay = 2
+}

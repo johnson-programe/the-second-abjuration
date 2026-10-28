@@ -1,0 +1,10 @@
+# Build / scratch
+*.zip
+*.log
+__pycache__/
+_*.py
+.DS_Store
+Thumbs.db
+
+# Do not commit git internals
+.git/
