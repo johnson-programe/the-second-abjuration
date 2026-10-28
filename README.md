@@ -2,6 +2,8 @@
 
 A **Hearts of Iron IV** mod (version **1.19.\***): the Netherlands renounces the monarchy and returns to the **Republic of the United Provinces** — the "Second Abjuration" of the old Spanish oath.
 
+**Steam Workshop:** https://steamcommunity.com/sharedfiles/filedetails/?id=3828723997
+
 ## Features
 
 - **Republican political route** — Regency vs. Commoners, with a **Balance of Power** bar.
