@@ -1944,3 +1944,35 @@ BUR = {
 RHE = {
 	color = rgb { 76 116 148 }
 }
+
+HOL_BR_FRA = {
+	color = rgb { 30 60 140 }
+}
+
+HOL_BR_ENG = {
+	color = rgb { 130 30 40 }
+}
+
+HOL_BR_SPR = {
+	color = rgb { 170 120 20 }
+}
+
+HOL_BR_POR = {
+	color = rgb { 20 110 60 }
+}
+
+HOL_BR_DEN = {
+	color = rgb { 160 30 40 }
+}
+
+HOL_BR_SWE = {
+	color = rgb { 40 90 160 }
+}
+
+HOL_BR_NOR = {
+	color = rgb { 140 30 40 }
+}
+
+HOL_BR_FIN = {
+	color = rgb { 40 80 150 }
+}

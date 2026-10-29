@@ -53,4 +53,69 @@ hol_macht_balans = {
 		}
 		ai_will_do = { base = 4 }
 	}
+
+	hol_kies_regent = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { has_country_flag = hol_republiek_uitgeroepen }
+		cost = 150
+		available = {
+			power_balance_value = { id = hol_power_balance value < -0.39 }
+			NOT = { has_country_leader = { character = HOL_van_beuningen } }
+		}
+		complete_effect = {
+			if = { limit = { NOT = { has_character = HOL_van_beuningen } } recruit_character = HOL_van_beuningen }
+			if = { limit = { NOT = { has_government = neutrality } } set_politics = { ruling_party = neutrality elections_allowed = no } }
+			promote_character = {
+				character = HOL_van_beuningen
+				ideology = oligarchism
+			}
+			add_stability = 0.05
+		}
+		ai_will_do = { base = 6 }
+	}
+
+	hol_kies_volk = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { has_country_flag = hol_republiek_uitgeroepen }
+		cost = 150
+		available = {
+			power_balance_value = { id = hol_power_balance value > 0.39 }
+			NOT = { has_country_leader = { character = HOL_albarda } }
+		}
+		complete_effect = {
+			if = { limit = { NOT = { has_character = HOL_albarda } } recruit_character = HOL_albarda }
+			if = { limit = { NOT = { has_government = democratic } } set_politics = { ruling_party = democratic elections_allowed = yes } }
+			promote_character = {
+				character = HOL_albarda
+				ideology = socialism
+			}
+			add_stability = 0.05
+		}
+		ai_will_do = { base = 6 }
+	}
+
+	hol_kies_parlement = {
+		icon = GFX_decision_generic_form_nation
+		allowed = { original_tag = HOL }
+		visible = { has_country_flag = hol_republiek_uitgeroepen }
+		cost = 100
+		available = {
+			is_power_balance_in_range = { id = hol_power_balance range = hol_balance_neutral_range }
+			any_country = { is_major = yes has_war_with = ROOT }
+			NOT = { has_country_leader = { character = HOL_staten_generaal } }
+		}
+		complete_effect = {
+			if = { limit = { NOT = { has_character = HOL_staten_generaal } } recruit_character = HOL_staten_generaal }
+			if = { limit = { NOT = { has_government = democratic } } set_politics = { ruling_party = democratic elections_allowed = yes } }
+			promote_character = {
+				character = HOL_staten_generaal
+				ideology = conservatism
+			}
+			add_war_support = 0.10
+			add_stability = 0.05
+		}
+		ai_will_do = { base = 8 }
+	}
 }

@@ -10,7 +10,7 @@ characters = {
 		}
 		country_leader = {
 			ideology = oligarchism
-			traits = { }
+			traits = { hol_trait_regenten_meester }
 			expire = "1965.1.1"
 		}
 	}
@@ -25,7 +25,7 @@ characters = {
 		}
 		country_leader = {
 			ideology = socialism
-			traits = { }
+			traits = { hol_trait_volkspresident }
 			expire = "1965.1.1"
 		}
 	}
@@ -215,6 +215,21 @@ characters = {
 			traits = { hol_trait_strateeg }
 			cost = 150
 			ai_will_do = { factor = 1 }
+		}
+	}
+
+	# Assembly emergency government (power balance centre + great war)
+	HOL_staten_generaal = {
+		name = HOL_staten_generaal
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_hol_conrad_helfrich"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { hol_trait_wan_zhong_yi_xin }
+			expire = "1965.1.1"
 		}
 	}
 }

@@ -436,8 +436,8 @@ hol_lage_landen = {
 			}
 		}
 		complete_effect = {
-			if = { limit = { FRA = { is_subject_of = HOL } } set_autonomy = { target = FRA autonomous_state = hol_brother_republic } }
-			if = { limit = { ENG = { is_subject_of = HOL } } set_autonomy = { target = ENG autonomous_state = hol_brother_republic } }
+			if = { limit = { FRA = { is_subject_of = HOL } } set_autonomy = { target = FRA autonomous_state = hol_brother_republic } FRA = { set_cosmetic_tag = HOL_BR_FRA } }
+			if = { limit = { ENG = { is_subject_of = HOL } } set_autonomy = { target = ENG autonomous_state = hol_brother_republic } ENG = { set_cosmetic_tag = HOL_BR_ENG } }
 			if = { limit = { RHE = { is_subject_of = HOL } } set_autonomy = { target = RHE autonomous_state = hol_brother_republic } }
 		}
 	}

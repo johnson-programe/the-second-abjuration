@@ -1315,6 +1315,10 @@ country_event = {
 			add_to_faction = PREV
 			country_event = hol_republiek.212
 		}
+		if = { limit = { tag = DEN } set_cosmetic_tag = HOL_BR_DEN }
+		if = { limit = { tag = SWE } set_cosmetic_tag = HOL_BR_SWE }
+		if = { limit = { tag = NOR } set_cosmetic_tag = HOL_BR_NOR }
+		if = { limit = { tag = FIN } set_cosmetic_tag = HOL_BR_FIN }
 		add_political_power = 25
 		add_stability = 0.05
 		ai_chance = {

@@ -9537,12 +9537,14 @@ if = {
 				limit = { country_exists = SPR }
 				if = { limit = { NOT = { SPR = { is_subject_of = HOL } } } puppet = SPR }
 				set_autonomy = { target = SPR autonomous_state = hol_brother_republic }
+				SPR = { set_cosmetic_tag = HOL_BR_SPR }
 				add_to_faction = SPR
 			}
 			if = {
 				limit = { country_exists = POR }
 				if = { limit = { NOT = { POR = { is_subject_of = HOL } } } puppet = POR }
 				set_autonomy = { target = POR autonomous_state = hol_brother_republic }
+				POR = { set_cosmetic_tag = HOL_BR_POR }
 				add_to_faction = POR
 			}
 		}

@@ -74,4 +74,34 @@ leader_traits = {
 		experience_gain_air = 0.05
 		ai_will_do = { factor = 1 }
 	}
+
+	hol_trait_regenten_meester = {
+		sprite = 13
+		political_power_gain = 0.20
+		consumer_goods_factor = -0.10
+		industrial_capacity_factory = 0.10
+		stability_factor = 0.10
+		production_speed_buildings_factor = 0.10
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_volkspresident = {
+		sprite = 13
+		war_support_factor = 0.15
+		stability_factor = 0.10
+		conscription_factor = 0.10
+		industrial_capacity_factory = 0.10
+		political_power_gain = 0.05
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_wan_zhong_yi_xin = {
+		sprite = 13
+		war_support_factor = 0.25
+		stability_factor = 0.20
+		army_defence_factor = 0.15
+		army_org_factor = 0.10
+		political_power_gain = 0.10
+		ai_will_do = { factor = 1 }
+	}
 }
