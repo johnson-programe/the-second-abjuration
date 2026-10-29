@@ -193,7 +193,7 @@ hol_onderdrukking = {
 
 hol_claims = {
 	hol_claim_portugal = {
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_form_nation
 		allowed = { original_tag = HOL }
 		visible = { country_exists = SAF }
 		cost = 150
@@ -201,7 +201,6 @@ hol_claims = {
 		available = {
 			country_exists = SAF
 			SAF = { is_subject_of = HOL }
-			
 		}
 		complete_effect = {
 			296 = { transfer_state_to = SAF }
@@ -209,8 +208,6 @@ hol_claims = {
 			544 = { transfer_state_to = SAF }
 			702 = { transfer_state_to = SAF }
 			705 = { transfer_state_to = SAF }
-			721 = { transfer_state_to = SAF }
-			729 = { transfer_state_to = SAF }
 			796 = { transfer_state_to = SAF }
 			891 = { transfer_state_to = SAF }
 			892 = { transfer_state_to = SAF }
@@ -222,19 +219,33 @@ hol_claims = {
 			544 = { add_core_of = SAF }
 			702 = { add_core_of = SAF }
 			705 = { add_core_of = SAF }
-			721 = { add_core_of = SAF }
-			729 = { add_core_of = SAF }
 			796 = { add_core_of = SAF }
 			891 = { add_core_of = SAF }
 			892 = { add_core_of = SAF }
 			896 = { add_core_of = SAF }
 			897 = { add_core_of = SAF }
 			}
+			if = {
+				limit = { country_exists = INS }
+				321 = { transfer_state_to = INS }
+				721 = { transfer_state_to = INS }
+				729 = { transfer_state_to = INS }
+				INS = {
+					321 = { add_core_of = INS }
+					721 = { add_core_of = INS }
+					729 = { add_core_of = INS }
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = INS } }
+				321 = { transfer_state_to = SAF }
+				721 = { transfer_state_to = SAF }
+				729 = { transfer_state_to = SAF }
+			}
 			add_to_variable = { var = hol_saf_gehoorzaamheid value = -1 }
-			add_war_support = 0.02
-
-			country_event = hol_republiek.91
 			add_political_power = -25
+			add_war_support = 0.02
+			country_event = hol_republiek.91
 		}
 		ai_will_do = { base = 10 }
 	}
@@ -412,7 +423,7 @@ hol_lage_landen = {
 				limit = { country_exists = COG }
 				COG = {
 					add_ideas = hol_vazal_staat_idea
-					set_autonomy = { target = COG autonomous_state = autonomy_colony }
+					set_autonomy = { target = COG autonomous_state = hol_kolonie }
 				}
 			}
 			country_event = hol_republiek.204
@@ -459,7 +470,7 @@ hol_wic_stichten = {
 		}
 		complete_effect = {
 			release_puppet = SUR
-			set_autonomy = { target = SUR autonomous_state = autonomy_colony }
+			set_autonomy = { target = SUR autonomous_state = hol_kolonie }
 			if = {
 				limit = { country_exists = SUR }
 				SUR = {
@@ -498,7 +509,7 @@ hol_zuid_afrika_koop = {
 		}
 		complete_effect = {
 			puppet = SAF
-			set_autonomy = { target = SAF autonomous_state = autonomy_colony }
+			set_autonomy = { target = SAF autonomous_state = hol_kolonie }
 			SAF = {
 				set_cosmetic_tag = HOL_AFRICA
 				add_ideas = hol_vazal_staat_idea

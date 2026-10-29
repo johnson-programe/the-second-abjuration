@@ -1176,12 +1176,12 @@
  hol_trait_wan_zhong_yi_xin:0 "United as One"
  hol_trait_wan_zhong_yi_xin_desc:0 "Assembly, army and people stand as one: +25% war support, +20% stability, +15% army defence, +10% organisation, +10% political power."
  HOL_staten_generaal:0 "The States-General"
- HOL_kies_regent:0 "Recall the Grand Pensionary"
- HOL_kies_regent_desc:0 "The balance has swung to the Regency. Recall the Grand Pensionary and let the chambers rule again."
- HOL_kies_volk:0 "Call on the People's Leader"
- HOL_kies_volk_desc:0 "The balance has swung to the Commoners. Call the people's leader to the head of the Republic."
- HOL_kies_parlement:0 "Convene the States-General"
- HOL_kies_parlement_desc:0 "With the balance at dead centre and a great power at our throat, the Assembly itself takes command - one nation, one will."
+ hol_kies_regent:0 "Recall the Grand Pensionary"
+ hol_kies_regent_desc:0 "The balance has swung to the Regency. Recall the Grand Pensionary and let the chambers rule again."
+ hol_kies_volk:0 "Call on the People's Leader"
+ hol_kies_volk_desc:0 "The balance has swung to the Commoners. Call the people's leader to the head of the Republic."
+ hol_kies_parlement:0 "Convene the States-General"
+ hol_kies_parlement_desc:0 "With the balance at dead centre and a great power at our throat, the Assembly itself takes command - one nation, one will."
 
 # ===== v30 keys =====
  hol_sur_fabrieken:0 "Requisition Colonial Industry"
@@ -1190,3 +1190,6 @@
  hol_ins_fabrieken_desc:0 "The colony's workshops are placed under Dutch management: one civilian and one military factory are added to the metropole's off-site industry. The cost is paid in obedience."
  hol_saf_fabrieken:0 "Requisition Colonial Industry"
  hol_saf_fabrieken_desc:0 "The colony's workshops are placed under Dutch management: one civilian and one military factory are added to the metropole's off-site industry. The cost is paid in obedience."
+
+# ===== v31 keys =====
+ hol_kolonie:0 "Colonial Dominion"

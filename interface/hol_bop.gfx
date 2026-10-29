@@ -8,7 +8,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/hol_volk_icon.tga"
 	}
 	spriteType = {
-		name = "GFX_autonomy_hol_brother_republic_icon"
+		name = "GFX_hol_brother_republic_icon"
 		texturefile = "gfx/interface/autonomy/autonomy_personal_union_puppet.dds"
+	}
+	spriteType = {
+		name = "GFX_hol_kolonie_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_colony_icon.dds"
 	}
 }

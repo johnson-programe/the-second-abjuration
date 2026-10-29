@@ -1176,12 +1176,12 @@
  hol_trait_wan_zhong_yi_xin:0 "万众一心"
  hol_trait_wan_zhong_yi_xin_desc:0 "议会、军队与人民同心一体：战争支持 +25%，稳定度 +20%，陆军防御 +15%，组织度 +10%，政治点数 +10%。"
  HOL_staten_generaal:0 "国会"
- HOL_kies_regent:0 "召回大议长"
- HOL_kies_regent_desc:0 "平衡已倾向摄政一方。召回大议长，让商会与议会重新掌权。"
- HOL_kies_volk:0 "召人民领袖执政"
- HOL_kies_volk_desc:0 "平衡已倾向平民一方。召人民领袖出任共和国之首。"
- HOL_kies_parlement:0 "召开国会"
- HOL_kies_parlement_desc:0 "平衡正中，而强敌压境——由国会亲自执掌，一国一心。"
+ hol_kies_regent:0 "召回大议长"
+ hol_kies_regent_desc:0 "平衡已倾向摄政一方。召回大议长，让商会与议会重新掌权。"
+ hol_kies_volk:0 "召人民领袖执政"
+ hol_kies_volk_desc:0 "平衡已倾向平民一方。召人民领袖出任共和国之首。"
+ hol_kies_parlement:0 "召开国会"
+ hol_kies_parlement_desc:0 "平衡正中，而强敌压境——由国会亲自执掌，一国一心。"
 
 # ===== v30 keys =====
  hol_sur_fabrieken:0 "征用西印度工业"
@@ -1190,3 +1190,6 @@
  hol_ins_fabrieken_desc:0 "殖民地工场交由荷兰管理：本土获得一座民用工厂与一座军用工厂（离岸工业）。代价是顺从度。"
  hol_saf_fabrieken:0 "征用南非工业"
  hol_saf_fabrieken_desc:0 "殖民地工场交由荷兰管理：本土获得一座民用工厂与一座军用工厂（离岸工业）。代价是顺从度。"
+
+# ===== v31 keys =====
+ hol_kolonie:0 "殖民领"

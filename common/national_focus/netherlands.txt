@@ -10026,7 +10026,7 @@ if = {
 		prerequisite = { focus = hol_uitroeping }
 		completion_reward = {
 			add_to_variable = { var = hol_ins_gehoorzaamheid value = 1 }
-			if = { limit = { country_exists = INS } set_autonomy = { target = INS autonomous_state = autonomy_colony } }
+			if = { limit = { country_exists = INS } set_autonomy = { target = INS autonomous_state = hol_kolonie } }
 			country_event = hol_republiek.84
 
 if = {
