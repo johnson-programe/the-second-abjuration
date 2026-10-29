@@ -1182,3 +1182,11 @@
  HOL_kies_volk_desc:0 "平衡已倾向平民一方。召人民领袖出任共和国之首。"
  HOL_kies_parlement:0 "召开国会"
  HOL_kies_parlement_desc:0 "平衡正中，而强敌压境——由国会亲自执掌，一国一心。"
+
+# ===== v30 keys =====
+ hol_sur_fabrieken:0 "征用西印度工业"
+ hol_sur_fabrieken_desc:0 "殖民地工场交由荷兰管理：本土获得一座民用工厂与一座军用工厂（离岸工业）。代价是顺从度。"
+ hol_ins_fabrieken:0 "征用东印度工业"
+ hol_ins_fabrieken_desc:0 "殖民地工场交由荷兰管理：本土获得一座民用工厂与一座军用工厂（离岸工业）。代价是顺从度。"
+ hol_saf_fabrieken:0 "征用南非工业"
+ hol_saf_fabrieken_desc:0 "殖民地工场交由荷兰管理：本土获得一座民用工厂与一座军用工厂（离岸工业）。代价是顺从度。"

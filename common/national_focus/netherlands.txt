@@ -8838,7 +8838,7 @@ if = {
 		id = hol_aandeel_stem
 		icon = GFX_goal_generic_national_unity
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = hol_vroedschap
 		cost = 4.3
 		prerequisite = { focus = hol_vroedschap }

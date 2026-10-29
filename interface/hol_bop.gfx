@@ -1,10 +1,14 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_bop_hol_regent_side"
-		texturefile = "gfx/interface/focusview/filter/balance_of_power_icon.dds"
+		texturefile = "gfx/interface/hol_regent_icon.tga"
 	}
 	spriteType = {
 		name = "GFX_bop_hol_volk_side"
-		texturefile = "gfx/interface/focusview/filter/balance_of_power_icon.dds"
+		texturefile = "gfx/interface/hol_volk_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_autonomy_hol_brother_republic_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_personal_union_puppet.dds"
 	}
 }

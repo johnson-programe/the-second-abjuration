@@ -910,4 +910,57 @@ hol_koloniaal_bestuur = {
 			add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
 		}
 	}
+	hol_sur_fabrieken = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SUR }
+		cost = 100
+		days_remove = 120
+		available = {
+			country_exists = SUR
+			check_variable = { hol_sur_gehoorzaamheid > 2 }
+		}
+		complete_effect = {
+			add_to_variable = { var = hol_sur_gehoorzaamheid value = -3 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+		ai_will_do = { base = 6 }
+	}
+
+	hol_ins_fabrieken = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { country_exists = INS }
+		cost = 100
+		days_remove = 120
+		available = {
+			country_exists = INS
+			check_variable = { hol_ins_gehoorzaamheid > 2 }
+		}
+		complete_effect = {
+			add_to_variable = { var = hol_ins_gehoorzaamheid value = -3 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+		ai_will_do = { base = 6 }
+	}
+
+	hol_saf_fabrieken = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SAF }
+		cost = 100
+		days_remove = 120
+		available = {
+			country_exists = SAF
+			check_variable = { hol_saf_gehoorzaamheid > 2 }
+		}
+		complete_effect = {
+			add_to_variable = { var = hol_saf_gehoorzaamheid value = -3 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+		ai_will_do = { base = 6 }
+	}
 }

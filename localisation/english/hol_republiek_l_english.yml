@@ -1182,3 +1182,11 @@
  HOL_kies_volk_desc:0 "The balance has swung to the Commoners. Call the people's leader to the head of the Republic."
  HOL_kies_parlement:0 "Convene the States-General"
  HOL_kies_parlement_desc:0 "With the balance at dead centre and a great power at our throat, the Assembly itself takes command - one nation, one will."
+
+# ===== v30 keys =====
+ hol_sur_fabrieken:0 "Requisition Colonial Industry"
+ hol_sur_fabrieken_desc:0 "The colony's workshops are placed under Dutch management: one civilian and one military factory are added to the metropole's off-site industry. The cost is paid in obedience."
+ hol_ins_fabrieken:0 "Requisition Colonial Industry"
+ hol_ins_fabrieken_desc:0 "The colony's workshops are placed under Dutch management: one civilian and one military factory are added to the metropole's off-site industry. The cost is paid in obedience."
+ hol_saf_fabrieken:0 "Requisition Colonial Industry"
+ hol_saf_fabrieken_desc:0 "The colony's workshops are placed under Dutch management: one civilian and one military factory are added to the metropole's off-site industry. The cost is paid in obedience."
