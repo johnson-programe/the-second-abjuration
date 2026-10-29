@@ -435,5 +435,49 @@ ideas = {
 				army_org_factor = 0.05
 			}
 		}
+
+		hol_rijkswetenschap_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		hol_rijksindustrie_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				industrial_capacity_factory = 0.08
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		hol_rijksleger_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
+				conscription_factor = 0.05
+			}
+		}
+
+		hol_rijksvloot_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				navy_capital_ship_attack_factor = 0.08
+				navy_screen_defence_factor = 0.08
+				naval_speed_factor = 0.05
+			}
+		}
+
+		hol_rijksbestuur_idea = {
+			picture = hol_lead_the_minor_democracies
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
 }
 }

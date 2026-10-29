@@ -8844,6 +8844,7 @@ if = {
 		cost = 4.3
 		prerequisite = { focus = hol_vroedschap }
 		available = {
+			NOT = { has_idea = hol_grondwet_democratisch_idea }
 			NOT = { is_power_balance_in_range = { id = hol_power_balance range = hol_volk_med_range } }
 			NOT = { is_power_balance_in_range = { id = hol_power_balance range = hol_volk_high_range } }
 		}
@@ -9017,6 +9018,7 @@ if = {
 		cost = 4.3
 		prerequisite = { focus = hol_bataafse_grondwet }
 		available = {
+			NOT = { has_idea = hol_grondwet_centralistisch_idea }
 			NOT = { is_power_balance_in_range = { id = hol_power_balance range = hol_regent_med_range } }
 			NOT = { is_power_balance_in_range = { id = hol_power_balance range = hol_regent_high_range } }
 		}
