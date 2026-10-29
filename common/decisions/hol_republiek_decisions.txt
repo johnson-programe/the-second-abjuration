@@ -193,36 +193,48 @@ hol_onderdrukking = {
 
 hol_claims = {
 	hol_claim_portugal = {
-		icon = GFX_decision_generic_form_nation
+		icon = GFX_decision_generic_political_discourse
 		allowed = { original_tag = HOL }
-		visible = { has_completed_focus = hol_verloren_factorijen }
+		visible = { country_exists = SAF }
 		cost = 150
 		fire_only_once = yes
 		available = {
-			country_exists = POR
 			country_exists = SAF
-			NOT = { has_war_with = POR }
-			POR = { is_at_war = no }
+			SAF = { is_subject_of = HOL }
+			
 		}
 		complete_effect = {
-			add_to_variable = { var = hol_saf_gehoorzaamheid value = -1 }
-			country_event = hol_republiek.91
-
-			POR = {
-				every_owned_state = {
-					limit = { NOT = { is_on_continent = europe } }
-					transfer_state_to = SAF
-				}
-			}
+			296 = { transfer_state_to = SAF }
+			540 = { transfer_state_to = SAF }
+			544 = { transfer_state_to = SAF }
+			702 = { transfer_state_to = SAF }
+			705 = { transfer_state_to = SAF }
+			721 = { transfer_state_to = SAF }
+			729 = { transfer_state_to = SAF }
+			796 = { transfer_state_to = SAF }
+			891 = { transfer_state_to = SAF }
+			892 = { transfer_state_to = SAF }
+			896 = { transfer_state_to = SAF }
+			897 = { transfer_state_to = SAF }
 			SAF = {
-				every_owned_state = {
-					limit = { NOT = { is_on_continent = europe } }
-					add_core_of = SAF
-				}
+			296 = { add_core_of = SAF }
+			540 = { add_core_of = SAF }
+			544 = { add_core_of = SAF }
+			702 = { add_core_of = SAF }
+			705 = { add_core_of = SAF }
+			721 = { add_core_of = SAF }
+			729 = { add_core_of = SAF }
+			796 = { add_core_of = SAF }
+			891 = { add_core_of = SAF }
+			892 = { add_core_of = SAF }
+			896 = { add_core_of = SAF }
+			897 = { add_core_of = SAF }
 			}
-			country_event = hol_republiek.63
-			add_political_power = -50
+			add_to_variable = { var = hol_saf_gehoorzaamheid value = -1 }
 			add_war_support = 0.02
+
+			country_event = hol_republiek.91
+			add_political_power = -25
 		}
 		ai_will_do = { base = 10 }
 	}
@@ -313,28 +325,23 @@ hol_guiana_aankoop = {
 	hol_koop_guiana = {
 		icon = GFX_decision_generic_political_discourse
 		allowed = { original_tag = HOL }
-		visible = { has_completed_focus = hol_guiana }
+		visible = { country_exists = SUR }
 		cost = 150
 		fire_only_once = yes
 		available = {
-			country_exists = ENG
 			country_exists = SUR
-			NOT = { has_war_with = ENG }
+			SUR = { is_subject_of = HOL }
+			
 		}
 		complete_effect = {
-			country_event = hol_republiek.127
-			ENG = {
-				every_owned_state = {
-					limit = { is_on_continent = south_america }
-					SUR = {
-						add_state_core = PREV
-						transfer_state = PREV
-					}
-				}
+			687 = { transfer_state_to = SUR }
+			SUR = {
+			687 = { add_core_of = SUR }
 			}
 			if = { limit = { country_exists = SUR } SUR = { set_cosmetic_tag = HOL_WI } }
-			add_political_power = -50
-			add_stability = -0.03
+
+			country_event = hol_republiek.127
+			add_political_power = -25
 		}
 		ai_will_do = { base = 10 }
 	}
@@ -342,26 +349,21 @@ hol_guiana_aankoop = {
 	hol_koop_frans_guiana = {
 		icon = GFX_decision_generic_political_discourse
 		allowed = { original_tag = HOL }
-		visible = { has_completed_focus = hol_guiana }
+		visible = { country_exists = SUR }
 		cost = 100
 		fire_only_once = yes
 		available = {
-			country_exists = FRA
 			country_exists = SUR
-			NOT = { has_war_with = FRA }
+			SUR = { is_subject_of = HOL }
+			
 		}
 		complete_effect = {
-			country_event = hol_republiek.128
-			FRA = {
-				every_owned_state = {
-					limit = { is_on_continent = south_america }
-					SUR = {
-						add_state_core = PREV
-						transfer_state = PREV
-					}
-				}
+			310 = { transfer_state_to = SUR }
+			SUR = {
+			310 = { add_core_of = SUR }
 			}
-			if = { limit = { country_exists = SUR } SUR = { set_cosmetic_tag = HOL_WI } }
+
+			country_event = hol_republiek.128
 			add_political_power = -25
 		}
 		ai_will_do = { base = 10 }
@@ -685,59 +687,227 @@ hol_koloniaal_bestuur = {
 	hol_zaf_koopt_spaans_afrika = {
 		icon = GFX_decision_generic_political_discourse
 		allowed = { original_tag = HOL }
-		visible = { country_exists = SPR country_exists = SAF }
+		visible = { country_exists = SAF }
 		cost = 150
 		fire_only_once = yes
 		available = {
-			country_exists = SPR
+			country_exists = SAF
 			SAF = { is_subject_of = HOL }
-			NOT = { has_war_with = SPR }
+			
 		}
 		complete_effect = {
-			SPR = {
-				every_owned_state = {
-					limit = { is_on_continent = africa }
-					transfer_state_to = SAF
-				}
-			}
+			290 = { transfer_state_to = SAF }
+			297 = { transfer_state_to = SAF }
+			699 = { transfer_state_to = SAF }
+			783 = { transfer_state_to = SAF }
 			SAF = {
-				every_owned_state = {
-					limit = { is_on_continent = africa }
-					add_core_of = SAF
-				}
+			290 = { add_core_of = SAF }
+			297 = { add_core_of = SAF }
+			699 = { add_core_of = SAF }
+			783 = { add_core_of = SAF }
 			}
 			add_to_variable = { var = hol_saf_gehoorzaamheid value = -1 }
-			add_political_power = 10
+
+			add_political_power = -25
 		}
 		ai_will_do = { base = 10 }
 	}
 	hol_zaf_koopt_portugees_afrika = {
 		icon = GFX_decision_generic_political_discourse
 		allowed = { original_tag = HOL }
-		visible = { country_exists = POR country_exists = SAF }
+		visible = { country_exists = SAF }
 		cost = 150
 		fire_only_once = yes
 		available = {
-			country_exists = POR
+			country_exists = SAF
 			SAF = { is_subject_of = HOL }
-			NOT = { has_war_with = POR }
+			
 		}
 		complete_effect = {
-			POR = {
-				every_owned_state = {
-					limit = { is_on_continent = africa }
-					transfer_state_to = SAF
-				}
-			}
+			296 = { transfer_state_to = SAF }
+			540 = { transfer_state_to = SAF }
+			544 = { transfer_state_to = SAF }
+			702 = { transfer_state_to = SAF }
+			705 = { transfer_state_to = SAF }
+			796 = { transfer_state_to = SAF }
+			891 = { transfer_state_to = SAF }
+			892 = { transfer_state_to = SAF }
+			896 = { transfer_state_to = SAF }
+			897 = { transfer_state_to = SAF }
 			SAF = {
-				every_owned_state = {
-					limit = { is_on_continent = africa }
-					add_core_of = SAF
-				}
+			296 = { add_core_of = SAF }
+			540 = { add_core_of = SAF }
+			544 = { add_core_of = SAF }
+			702 = { add_core_of = SAF }
+			705 = { add_core_of = SAF }
+			796 = { add_core_of = SAF }
+			891 = { add_core_of = SAF }
+			892 = { add_core_of = SAF }
+			896 = { add_core_of = SAF }
+			897 = { add_core_of = SAF }
 			}
 			add_to_variable = { var = hol_saf_gehoorzaamheid value = -1 }
-			add_political_power = 10
+
+			add_political_power = -25
 		}
 		ai_will_do = { base = 10 }
+	}
+	hol_sur_wapens = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SUR }
+		cost = 0
+		days_remove = 60
+		available = {
+			check_variable = { hol_sur_gehoorzaamheid < 10 }
+			has_equipment = { infantry_equipment > 799 }
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -800 }
+			SUR = { add_equipment_to_stockpile = { type = infantry_equipment amount = 800 } }
+			add_to_variable = { var = hol_sur_gehoorzaamheid value = 2 }
+		}
+	}
+
+	hol_sur_industrialisatie = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SUR }
+		cost = 75
+		days_remove = 150
+		available = { country_exists = SUR }
+		complete_effect = {
+			SUR = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			random_owned_state = { add_resource = { type = steel amount = 3 } }
+			add_to_variable = { var = hol_sur_gehoorzaamheid value = 1 }
+		}
+	}
+
+	hol_sur_militair = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SUR }
+		cost = 50
+		days_remove = 90
+		available = { country_exists = SUR }
+		complete_effect = {
+			add_army_experience = 25
+			SUR = {
+				add_manpower = 4000
+				add_army_experience = 10
+			}
+			add_to_variable = { var = hol_sur_gehoorzaamheid value = 1 }
+		}
+	}
+
+	hol_ins_wapens = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { country_exists = INS }
+		cost = 0
+		days_remove = 60
+		available = {
+			check_variable = { hol_ins_gehoorzaamheid < 10 }
+			has_equipment = { infantry_equipment > 799 }
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -800 }
+			INS = { add_equipment_to_stockpile = { type = infantry_equipment amount = 800 } }
+			add_to_variable = { var = hol_ins_gehoorzaamheid value = 2 }
+		}
+	}
+
+	hol_ins_industrialisatie = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { country_exists = INS }
+		cost = 75
+		days_remove = 150
+		available = { country_exists = INS }
+		complete_effect = {
+			INS = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			random_owned_state = { add_resource = { type = steel amount = 3 } }
+			add_to_variable = { var = hol_ins_gehoorzaamheid value = 1 }
+		}
+	}
+
+	hol_ins_militair = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { country_exists = INS }
+		cost = 50
+		days_remove = 90
+		available = { country_exists = INS }
+		complete_effect = {
+			add_army_experience = 25
+			INS = {
+				add_manpower = 4000
+				add_army_experience = 10
+			}
+			add_to_variable = { var = hol_ins_gehoorzaamheid value = 1 }
+		}
+	}
+
+	hol_saf_wapens = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SAF }
+		cost = 0
+		days_remove = 60
+		available = {
+			check_variable = { hol_saf_gehoorzaamheid < 10 }
+			has_equipment = { infantry_equipment > 799 }
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -800 }
+			SAF = { add_equipment_to_stockpile = { type = infantry_equipment amount = 800 } }
+			add_to_variable = { var = hol_saf_gehoorzaamheid value = 2 }
+		}
+	}
+
+	hol_saf_industrialisatie = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SAF }
+		cost = 75
+		days_remove = 150
+		available = { country_exists = SAF }
+		complete_effect = {
+			SAF = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			random_owned_state = { add_resource = { type = steel amount = 3 } }
+			add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
+		}
+	}
+
+	hol_saf_militair = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = HOL }
+		visible = { country_exists = SAF }
+		cost = 50
+		days_remove = 90
+		available = { country_exists = SAF }
+		complete_effect = {
+			add_army_experience = 25
+			SAF = {
+				add_manpower = 4000
+				add_army_experience = 10
+			}
+			add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
+		}
 	}
 }

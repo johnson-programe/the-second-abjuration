@@ -5,10 +5,11 @@ hol_macht_balans = {
 		allowed = { original_tag = HOL }
 		visible = { always = yes }
 		cost = 25
-		available = { check_variable = { hol_macht_balans > 0 } }
+		available = { power_balance_value = { id = hol_power_balance value > -0.9 } }
 		complete_effect = {
 			add_power_balance_value = { id = hol_power_balance value = -0.1 }
 		}
+		ai_will_do = { base = 5 }
 	}
 
 	hol_balans_volk = {
@@ -16,9 +17,40 @@ hol_macht_balans = {
 		allowed = { original_tag = HOL }
 		visible = { always = yes }
 		cost = 25
-		available = { check_variable = { hol_macht_balans < 100 } }
+		available = { power_balance_value = { id = hol_power_balance value < 0.9 } }
 		complete_effect = {
 			add_power_balance_value = { id = hol_power_balance value = 0.1 }
 		}
+		ai_will_do = { base = 5 }
+	}
+
+	hol_balans_regent_steun = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { always = yes }
+		cost = 50
+		days_remove = 60
+		available = { power_balance_value = { id = hol_power_balance value > -0.6 } }
+		complete_effect = {
+			add_power_balance_value = { id = hol_power_balance value = -0.15 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_political_power = 15
+		}
+		ai_will_do = { base = 4 }
+	}
+
+	hol_balans_volk_steun = {
+		icon = GFX_decision_generic_construction
+		allowed = { original_tag = HOL }
+		visible = { always = yes }
+		cost = 50
+		days_remove = 60
+		available = { power_balance_value = { id = hol_power_balance value < 0.6 } }
+		complete_effect = {
+			add_power_balance_value = { id = hol_power_balance value = 0.15 }
+			add_manpower = 6000
+			add_war_support = 0.03
+		}
+		ai_will_do = { base = 4 }
 	}
 }
