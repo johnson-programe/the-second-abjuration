@@ -30,6 +30,7 @@ country_event = {
 	option = {
 		name = hol_republiek.1.a
 		add_to_variable = { hol_route = -1 }
+		remove_ideas = HOL_wilhelmina
 		add_stability = -0.05
 		add_war_support = 0.05
 		add_political_power = 25
@@ -39,6 +40,7 @@ country_event = {
 	option = {
 		name = hol_republiek.1.b
 		add_to_variable = { hol_route = 1 }
+		remove_ideas = HOL_wilhelmina
 		add_stability = 0.03
 		country_event = { id = hol_republiek.2 days = 5 }
 	}
@@ -126,6 +128,7 @@ country_event = {
 
 	option = {
 		name = hol_republiek.5.a
+		remove_ideas = HOL_wilhelmina
 		add_stability = 0.05
 		set_country_flag = hol_wilhelmina_ballingschap
 		if = {

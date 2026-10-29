@@ -211,12 +211,12 @@
  # ===== Decisions =====
  hol_ontwikkeling:0 "National Development"
  hol_ontwikkeling_desc:0 "Spend one civilian factory's output for sixty days to reclaim land or survey minerals."
- hol_develop_slots:0 "Expand Industrial Land"
- hol_develop_slots_desc:0 "Reclaim and service land for industry. After sixty days the state gains 3 building slots."
+ hol_develop_slots:0 "Reclaim the Noordoostpolder"
+ hol_develop_slots_desc:0 "Dike and drain a new polder from the IJsselmeer, as the Zuiderzee Works have done since 1936. After sixty days the state gains 3 building slots."
  hol_develop_oil:0 "Develop the Oil Fields"
  hol_develop_oil_desc:0 "Expand the fields at Palembang and Tarakan. After ninety days the state gains 6 oil."
- hol_develop_steel:0 "Expand the Blast Furnaces"
- hol_develop_steel_desc:0 "Add a furnace line at IJmuiden, fed by imported ore and Limburg coke. After ninety days the state gains 5 steel."
+ hol_develop_steel:0 "Expand the Hoogovens"
+ hol_develop_steel_desc:0 "Add a furnace line to the Royal Blast Furnaces at IJmuiden, founded in 1918 and firing since 1924. After ninety days the state gains 5 steel."
  hol_develop_aluminium:0 "Open the Bauxite Pits"
  hol_develop_aluminium_desc:0 "Work the Surinamese bauxite deposits, the richest in the Americas. After a hundred and twenty days the state gains 6 aluminium."
 
@@ -1117,14 +1117,14 @@
  hol_noordse_liga_desc:0 "The Republic turns its face to the North. Denmark, Sweden, Norway and Finland are invited to swear the oath as Brother Republics - free in their own affairs, bound to The Hague in fleet, tariff and foreign policy."
  hol_lage_landen_leger_idea:0 "Army of the Low Countries"
  hol_lage_landen_leger_idea_desc:0 "Recruits from Flanders, Brabant and the Walloon valleys fill the ranks: the army of the Republic is no longer a polder army, but a Low Countries army."
- hol_develop_coal:0 "Work the Coal Measures"
- hol_develop_coal_desc:0 "Sink new galleries into the southern coal field. After ninety days the state gains 4 steel - coke for the furnaces, not ore for the mills."
+ hol_develop_coal:0 "Work the Staatsmijnen"
+ hol_develop_coal_desc:0 "Deepen the State Mines of Limburg at Heerlen, which have cut coal since 1902. After ninety days the state gains 4 steel - coke for the furnaces."
  hol_develop_rubber:0 "Plant Rubber Gardens"
  hol_develop_rubber_desc:0 "Clear jungle for Hevea plantations, as the planters have done in Sumatra and Malaya. After ninety days the state gains 6 rubber."
  hol_develop_chromium:0 "Open the Chromite Seams"
  hol_develop_chromium_desc:0 "Survey and open the chromite seams of the Transvaal. After a hundred and twenty days the state gains 6 chromium."
- hol_grote_ontwikkeling:0 "The Great Works"
- hol_grote_ontwikkeling_desc:0 "One year of conscripted labour and requisitioned output. Consumer goods rise by 10% while the works proceed; when they finish, the state receives two civilian factories and two building slots."
+ hol_grote_ontwikkeling:0 "The Plan of Labour"
+ hol_grote_ontwikkeling_desc:0 "The Plan van de Arbeid of 1935 in full: state-financed public works, canals, housing and factories. Consumer goods rise by 10% while it runs; the state receives two civilian factories and two building slots."
 
 # ===== v28 keys =====
  hol_balans_regent_steun:0 "Appeal to the Regents"
@@ -1134,15 +1134,15 @@
  hol_sur_wapens:0 "Ship Rifles to the Colony"
  hol_sur_wapens_desc:0 "Eight hundred rifles and ammunition from the arsenal. The colonial garrison is strengthened and its loyalty bought with powder."
  hol_sur_industrialisatie:0 "Industrialise the Colony"
- hol_sur_industrialisatie_desc:0 "Dutch capital builds a factory in the colony; in return the metropole draws three units of steel from its mines and workshops."
+ hol_sur_industrialisatie_desc:0 "Dutch capital builds a factory in Suriname; in return the metropole draws five units of aluminium from the bauxite pits of Paranam."
  hol_ins_wapens:0 "Ship Rifles to the Colony"
  hol_ins_wapens_desc:0 "Eight hundred rifles and ammunition from the arsenal. The colonial garrison is strengthened and its loyalty bought with powder."
  hol_ins_industrialisatie:0 "Industrialise the Colony"
- hol_ins_industrialisatie_desc:0 "Dutch capital builds a factory in the colony; in return the metropole draws three units of steel from its mines and workshops."
+ hol_ins_industrialisatie_desc:0 "Dutch capital builds a factory in the Indies; in return the metropole draws five units of rubber from the estates of Sumatra and Java."
  hol_saf_wapens:0 "Ship Rifles to the Colony"
  hol_saf_wapens_desc:0 "Eight hundred rifles and ammunition from the arsenal. The colonial garrison is strengthened and its loyalty bought with powder."
  hol_saf_industrialisatie:0 "Industrialise the Colony"
- hol_saf_industrialisatie_desc:0 "Dutch capital builds a factory in the colony; in return the metropole draws three units of steel from its mines and workshops."
+ hol_saf_industrialisatie_desc:0 "Dutch capital builds a factory at the Cape; in return the metropole draws five units of chromium from the Transvaal seams."
 
 # ===== v29 keys =====
  HOL_BR_FRA:0 "French Brother Republic"
@@ -1192,4 +1192,8 @@
  hol_saf_fabrieken_desc:0 "The colony's workshops are placed under Dutch management: one civilian and one military factory are added to the metropole's off-site industry. The cost is paid in obedience."
 
 # ===== v31 keys =====
- hol_kolonie:0 "Colonial Dominion"
+ hol_kolonie:0 "Chartered Territory of the Republic"
+# ===== v32b =====
+ HOL_BR_GER:0 "Rhenish Brother Republic"
+ HOL_BR_GER_DEF:0 "the Rhenish Brother Republic"
+ HOL_BR_GER_ADJ:0 "Rhenish"

@@ -443,13 +443,18 @@ hol_lage_landen = {
 			OR = {
 				FRA = { is_subject_of = HOL }
 				ENG = { is_subject_of = HOL }
-				RHE = { is_subject_of = HOL }
+				GER = { is_subject_of = HOL has_cosmetic_tag = RHE }
+				GER = { is_subject_of = HOL has_cosmetic_tag = HOL_BR_GER }
 			}
 		}
 		complete_effect = {
 			if = { limit = { FRA = { is_subject_of = HOL } } set_autonomy = { target = FRA autonomous_state = hol_brother_republic } FRA = { set_cosmetic_tag = HOL_BR_FRA } }
 			if = { limit = { ENG = { is_subject_of = HOL } } set_autonomy = { target = ENG autonomous_state = hol_brother_republic } ENG = { set_cosmetic_tag = HOL_BR_ENG } }
-			if = { limit = { RHE = { is_subject_of = HOL } } set_autonomy = { target = RHE autonomous_state = hol_brother_republic } }
+			if = {
+				limit = { GER = { is_subject_of = HOL } }
+				set_autonomy = { target = GER autonomous_state = hol_brother_republic }
+				GER = { set_cosmetic_tag = HOL_BR_GER }
+			}
 		}
 	}
 }
@@ -794,7 +799,7 @@ hol_koloniaal_bestuur = {
 					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 				}
 			}
-			random_owned_state = { add_resource = { type = steel amount = 3 } }
+			random_owned_state = { add_resource = { type = aluminium amount = 5 } }
 			add_to_variable = { var = hol_sur_gehoorzaamheid value = 1 }
 		}
 	}
@@ -847,7 +852,7 @@ hol_koloniaal_bestuur = {
 					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 				}
 			}
-			random_owned_state = { add_resource = { type = steel amount = 3 } }
+			random_owned_state = { add_resource = { type = rubber amount = 5 } }
 			add_to_variable = { var = hol_ins_gehoorzaamheid value = 1 }
 		}
 	}
@@ -900,7 +905,7 @@ hol_koloniaal_bestuur = {
 					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 				}
 			}
-			random_owned_state = { add_resource = { type = steel amount = 3 } }
+			random_owned_state = { add_resource = { type = chromium amount = 5 } }
 			add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
 		}
 	}

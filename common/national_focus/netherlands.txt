@@ -8579,6 +8579,7 @@ focus_tree = {
 			set_cosmetic_tag = HOL_REP
 			set_country_flag = hol_republiek_uitgeroepen
 			remove_ideas = hol_kroon_spanning_idea
+			remove_ideas = HOL_wilhelmina
 			add_ideas = hol_republiek_geboren_idea
 			add_stability = 0.10
 			add_political_power = 100

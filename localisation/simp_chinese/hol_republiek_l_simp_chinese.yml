@@ -211,12 +211,12 @@
  # ===== 决议 =====
  hol_ontwikkeling:0 "国土开发"
  hol_ontwikkeling_desc:0 "以一个民用工厂的产能为代价，用六十天开垦土地、勘探矿藏。"
- hol_develop_slots:0 "扩展工业用地"
- hol_develop_slots_desc:0 "填海并平整工业用地。六十天后该州获得 3 个建筑位。"
+ hol_develop_slots:0 "开垦东北圩田"
+ hol_develop_slots_desc:0 "在艾瑟尔湖上筑堤排水、开垦新圩田——自一九三六年以来须德海工程一直如此。六十天后该州获得 3 个建筑位。"
  hol_develop_oil:0 "开发油田"
  hol_develop_oil_desc:0 "扩建巨港与打拉根的油田。九十天后该州获得 6 点石油。"
- hol_develop_steel:0 "扩建高炉"
- hol_develop_steel_desc:0 "在艾默伊登增建高炉产线，以进口矿砂与林堡焦炭为食。九十天后该州获得 5 点钢铁。"
+ hol_develop_steel:0 "扩建艾默伊登高炉"
+ hol_develop_steel_desc:0 "为艾默伊登皇家高炉增设产线——该厂一九一八年创办，一九二四年点火。九十天后该州获得 5 点钢铁。"
  hol_develop_aluminium:0 "开采铝土矿"
  hol_develop_aluminium_desc:0 "开采苏里南的铝土矿床——美洲最富者。一百二十天后该州获得 6 点铝。"
 
@@ -1117,14 +1117,14 @@
  hol_noordse_liga_desc:0 "共和国把目光转向北方。丹麦、瑞典、挪威与芬兰受邀以兄弟共和国之名宣誓——内政自理，而在舰队、关税与外交上系于海牙。"
  hol_lage_landen_leger_idea:0 "低地军团"
  hol_lage_landen_leger_idea_desc:0 "佛兰德、布拉班特与瓦隆谷地的新兵填满了行伍：共和国的军队不再是圩田的军队，而是低地的军队。"
- hol_develop_coal:0 "开采煤田"
- hol_develop_coal_desc:0 "在南方煤田开凿新巷道。九十天后该州获得 4 点钢铁——是供给炉子的焦炭，而非矿砂。"
+ hol_develop_coal:0 "开采国营煤矿"
+ hol_develop_coal_desc:0 "加深海尔伦的林堡国营煤矿——自一九〇二年起出煤。九十天后该州获得 4 点钢铁（焦炭）。"
  hol_develop_rubber:0 "开辟橡胶园"
  hol_develop_rubber_desc:0 "如苏门答腊与马来亚的种植园主那样，砍伐丛林种下三叶橡胶。九十天后该州获得 6 点橡胶。"
  hol_develop_chromium:0 "开采铬铁矿"
  hol_develop_chromium_desc:0 "勘测并开采德兰士瓦的铬铁矿脉。一百二十天后该州获得 6 点铬。"
- hol_grote_ontwikkeling:0 "大工程"
- hol_grote_ontwikkeling_desc:0 "一年的征调劳力与征用产出。工程期间消费品上升 10%；完工后该州获得两座民用工厂与两个建筑位。"
+ hol_grote_ontwikkeling:0 "劳动计划"
+ hol_grote_ontwikkeling_desc:0 "全面推行一九三五年的《劳动计划》：由国家出资兴办公共工程、运河、住宅与工厂。工程期间消费品上升 10%；完工后该州获得两座民用工厂与两个建筑位。"
 
 # ===== v28 keys =====
  hol_balans_regent_steun:0 "求助摄政派"
@@ -1134,15 +1134,15 @@
  hol_sur_wapens:0 "向西印度输送步枪"
  hol_sur_wapens_desc:0 "从军械库拨出八百支步枪与弹药。殖民地驻军得以加强，其忠诚也以火药换来。"
  hol_sur_industrialisatie:0 "西印度工业化"
- hol_sur_industrialisatie_desc:0 "荷兰资本在殖民地建起一座工厂；作为回报，本土从其矿场与工场抽取三点钢铁。"
+ hol_sur_industrialisatie_desc:0 "荷兰资本在苏里南建起一座工厂；作为回报，本土从帕拉南铝土矿获得 5 点铝。"
  hol_ins_wapens:0 "向东印度输送步枪"
  hol_ins_wapens_desc:0 "从军械库拨出八百支步枪与弹药。殖民地驻军得以加强，其忠诚也以火药换来。"
  hol_ins_industrialisatie:0 "东印度工业化"
- hol_ins_industrialisatie_desc:0 "荷兰资本在殖民地建起一座工厂；作为回报，本土从其矿场与工场抽取三点钢铁。"
+ hol_ins_industrialisatie_desc:0 "荷兰资本在东印度建起一座工厂；作为回报，本土从苏门答腊与爪哇的种植园获得 5 点橡胶。"
  hol_saf_wapens:0 "向南非输送步枪"
  hol_saf_wapens_desc:0 "从军械库拨出八百支步枪与弹药。殖民地驻军得以加强，其忠诚也以火药换来。"
  hol_saf_industrialisatie:0 "南非工业化"
- hol_saf_industrialisatie_desc:0 "荷兰资本在殖民地建起一座工厂；作为回报，本土从其矿场与工场抽取三点钢铁。"
+ hol_saf_industrialisatie_desc:0 "荷兰资本在开普建起一座工厂；作为回报，本土从德兰士瓦矿脉获得 5 点铬。"
 
 # ===== v29 keys =====
  HOL_BR_FRA:0 "法兰西兄弟共和国"
@@ -1192,4 +1192,8 @@
  hol_saf_fabrieken_desc:0 "殖民地工场交由荷兰管理：本土获得一座民用工厂与一座军用工厂（离岸工业）。代价是顺从度。"
 
 # ===== v31 keys =====
- hol_kolonie:0 "殖民领"
+ hol_kolonie:0 "共和国特许领地"
+# ===== v32b =====
+ HOL_BR_GER:0 "莱茵兄弟共和国"
+ HOL_BR_GER_DEF:0 "莱茵兄弟共和国"
+ HOL_BR_GER_ADJ:0 "莱茵的"

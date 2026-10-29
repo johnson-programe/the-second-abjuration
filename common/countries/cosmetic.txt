@@ -1976,3 +1976,7 @@ HOL_BR_NOR = {
 HOL_BR_FIN = {
 	color = rgb { 40 80 150 }
 }
+
+HOL_BR_GER = {
+	color = rgb { 76 116 148 }
+}

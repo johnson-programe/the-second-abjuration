@@ -22,9 +22,9 @@ autonomy_state = {
 		faction_subject_contribution_gain = -0.5
 		faction_influence_contribution_factor = -0.5
 	}
-	ai_subject_wants_higher = { factor = 1.0 }
+	ai_subject_wants_higher = { factor = 0 }
 	ai_overlord_wants_lower = { factor = 1.0 }
 	allowed = { always = yes }
-	can_take_level = { }
+	can_take_level = { always = no }
 	can_lose_level = { }
 }
