@@ -17,6 +17,12 @@
 	shared_focus = hol_sur_industrie
 	shared_focus = hol_sur_militair
 	shared_focus = hol_sur_politiek
+	shared_focus = hol_joint_rijksbezit
+	shared_focus = hol_joint_rijkswetenschap
+	shared_focus = hol_joint_rijksindustrie
+	shared_focus = hol_joint_rijksleger
+	shared_focus = hol_joint_rijksvloot
+	shared_focus = hol_joint_rijksbestuur
 
 
 

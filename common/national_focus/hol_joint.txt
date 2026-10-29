@@ -5,7 +5,10 @@ joint_focus = {
 	icon = GFX_goal_generic_major_alliance
 	x = 52
 	y = 10
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
@@ -30,7 +33,10 @@ joint_focus = {
 	x = -10
 	y = 2
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR }
@@ -55,7 +61,10 @@ joint_focus = {
 	x = -1
 	y = 2
 	relative_position_id = hol_joint_sur
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR }
@@ -96,7 +105,10 @@ joint_focus = {
 	x = 0
 	y = 2
 	relative_position_id = hol_joint_sur
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR }
@@ -121,7 +133,10 @@ joint_focus = {
 	x = 1
 	y = 2
 	relative_position_id = hol_joint_sur
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR }
@@ -148,7 +163,10 @@ joint_focus = {
 	x = 2
 	y = 2
 	relative_position_id = hol_joint_sur
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR }
@@ -172,7 +190,10 @@ joint_focus = {
 	x = 0
 	y = 2
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = INS }
@@ -197,7 +218,10 @@ joint_focus = {
 	x = -1
 	y = 2
 	relative_position_id = hol_joint_ins
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = INS }
@@ -238,7 +262,10 @@ joint_focus = {
 	x = 0
 	y = 2
 	relative_position_id = hol_joint_ins
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = INS }
@@ -263,7 +290,10 @@ joint_focus = {
 	x = 1
 	y = 2
 	relative_position_id = hol_joint_ins
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = INS }
@@ -290,7 +320,10 @@ joint_focus = {
 	x = 2
 	y = 2
 	relative_position_id = hol_joint_ins
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = INS }
@@ -314,7 +347,10 @@ joint_focus = {
 	x = 10
 	y = 2
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SAF }
@@ -339,7 +375,10 @@ joint_focus = {
 	x = -1
 	y = 2
 	relative_position_id = hol_joint_saf
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SAF }
@@ -380,7 +419,10 @@ joint_focus = {
 	x = 0
 	y = 2
 	relative_position_id = hol_joint_saf
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SAF }
@@ -388,18 +430,14 @@ joint_focus = {
 	}
 	completion_reward = { }
 	completion_reward_joint_originator = {
-		HOL = {
-			add_political_power = 25
-			add_ideas = hol_koloniaal_kracht_idea
-			add_offsite_building = { type = industrial_complex level = 1 }
-		}
+		add_political_power = 25
+		add_ideas = hol_koloniaal_kracht_idea
+		add_offsite_building = { type = industrial_complex level = 1 }
 	}
 	completion_reward_joint_member = {
-		HOL = {
-			add_political_power = 15
-			add_ideas = hol_koloniaal_kracht_idea
-			add_offsite_building = { type = industrial_complex level = 1 }
-		}
+		add_political_power = 25
+		add_ideas = hol_koloniaal_kracht_idea
+		random_owned_state = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 	}
 }
 
@@ -409,7 +447,10 @@ joint_focus = {
 	x = 1
 	y = 2
 	relative_position_id = hol_joint_saf
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SAF }
@@ -417,19 +458,16 @@ joint_focus = {
 	}
 	completion_reward = { }
 	completion_reward_joint_originator = {
-		HOL = {
-			add_political_power = 25
-			add_army_experience = 35
-			add_ideas = hol_koloniaal_leger_idea
-			add_tech_bonus = { name = saf_militair bonus = 0.5 uses = 1 category = land_doctrine }
-		}
+		add_political_power = 25
+		add_army_experience = 35
+		add_ideas = hol_koloniaal_leger_idea
+		add_tech_bonus = { name = saf_militair bonus = 0.5 uses = 1 category = land_doctrine }
 	}
 	completion_reward_joint_member = {
-		HOL = {
-			add_political_power = 15
-			add_army_experience = 20
-			add_ideas = hol_koloniaal_leger_idea
-		}
+		add_political_power = 25
+		add_army_experience = 35
+		add_ideas = hol_koloniaal_leger_idea
+		add_tech_bonus = { name = saf_militair bonus = 0.5 uses = 1 category = land_doctrine }
 	}
 }
 
@@ -439,7 +477,10 @@ joint_focus = {
 	x = 2
 	y = 2
 	relative_position_id = hol_joint_saf
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SAF }
@@ -447,18 +488,13 @@ joint_focus = {
 	}
 	completion_reward = { }
 	completion_reward_joint_originator = {
-		HOL = {
-			add_political_power = 25
-			add_stability = 0.04
-			add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
-		}
+		add_political_power = 25
+		add_stability = 0.04
+		add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
 	}
 	completion_reward_joint_member = {
-		HOL = {
-			add_political_power = 15
-			add_stability = 0.02
-			add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
-		}
+		add_political_power = 25
+		add_stability = 0.04
 	}
 }
 
@@ -468,7 +504,10 @@ joint_focus = {
 	x = 0
 	y = 6
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
@@ -495,7 +534,10 @@ joint_focus = {
 	x = -4
 	y = 8
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
@@ -523,7 +565,10 @@ joint_focus = {
 	x = -2
 	y = 8
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
@@ -549,7 +594,10 @@ joint_focus = {
 	x = 0
 	y = 8
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
@@ -575,7 +623,10 @@ joint_focus = {
 	x = 2
 	y = 8
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
@@ -601,7 +652,10 @@ joint_focus = {
 	x = 4
 	y = 8
 	relative_position_id = hol_joint_raad
-	offset = { x = 0 y = 40 trigger = { NOT = { tag = HOL } } }
+	offset = { x = 0 y = 0 trigger = { tag = HOL } }
+	offset = { x = -11 y = 0 trigger = { tag = INS } }
+	offset = { x = -5 y = 0 trigger = { tag = SAF } }
+	offset = { x = -41 y = 0 trigger = { tag = SUR } }
 	cost = 4.3
 	available = {
 		OR = { tag = HOL tag = SUR tag = SAF tag = INS }
