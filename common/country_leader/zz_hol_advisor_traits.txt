@@ -1,0 +1,77 @@
+leader_traits = {
+
+	hol_trait_staatsraad = {
+		sprite = 13
+		political_power_gain = 0.15
+		stability_factor = 0.10
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_industrie_patron = {
+		sprite = 4
+		industrial_capacity_factory = 0.10
+		production_speed_buildings_factor = 0.10
+		consumer_goods_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_volkstribuun = {
+		sprite = 13
+		stability_factor = 0.10
+		war_support_factor = 0.10
+		political_power_gain = 0.05
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_liberale_koers = {
+		sprite = 13
+		political_power_gain = 0.10
+		stability_factor = 0.05
+		consumer_goods_factor = -0.03
+		research_speed_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_veldheer = {
+		sprite = 7
+		army_attack_factor = 0.15
+		army_defence_factor = 0.10
+		experience_gain_army = 0.08
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_vlootvoogd = {
+		sprite = 3
+		navy_capital_ship_attack_factor = 0.15
+		navy_screen_attack_factor = 0.10
+		navy_capital_ship_defence_factor = 0.10
+		experience_gain_navy = 0.08
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_luchtmaarschalk = {
+		sprite = 1
+		air_attack_factor = 0.12
+		air_agility = 0.10
+		air_superiority_factor = 0.10
+		experience_gain_air = 0.08
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_commando = {
+		sprite = 9
+		breakthrough_factor = 0.10
+		army_strength_factor = 0.10
+		army_org_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+
+	hol_trait_strateeg = {
+		sprite = 6
+		research_speed_factor = 0.05
+		experience_gain_army = 0.05
+		experience_gain_navy = 0.05
+		experience_gain_air = 0.05
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -1,0 +1,39 @@
+HOL_philips_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+	allowed = { tag = HOL }
+	initial_trait = {
+		name = hol_mio_trait_philips
+		equipment_bonus = {
+			build_cost_ic = -0.10
+			defense = 0.05
+			reliability = 0.05
+		}
+	}
+}
+
+HOL_stork_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+	allowed = { tag = HOL }
+	initial_trait = {
+		name = hol_mio_trait_stork
+		equipment_bonus = {
+			soft_attack = 0.08
+			build_cost_ic = -0.05
+		}
+	}
+}
+
+HOL_werkspoor_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
+	allowed = { tag = HOL }
+	initial_trait = {
+		name = hol_mio_trait_werkspoor
+		equipment_bonus = {
+			maximum_speed = 0.05
+			reliability = 0.08
+		}
+	}
+}

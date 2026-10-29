@@ -16,28 +16,9 @@ hol_ontwikkeling = {
 		modifier = { consumer_goods_factor = 0.05 }
 		complete_effect = {
 			country_event = hol_republiek.90
-
 			FROM = { add_extra_state_shared_building_slots = 3 }
 		}
 		ai_will_do = { base = 20 }
-	}
-
-	hol_develop_oil = {
-		icon = GFX_decision_generic_industry
-		allowed = { original_tag = HOL }
-		visible = { has_completed_focus = HOL_continue_the_public_works }
-		state_target = yes
-		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT }
-		}
-		on_map_mode = map_and_decisions_view
-		days_remove = 60
-		modifier = { consumer_goods_factor = 0.05 }
-		complete_effect = {
-			country_event = hol_republiek.120
-			FROM = { add_resource = { type = oil amount = 6 } }
-		}
-		ai_will_do = { base = 10 }
 	}
 
 	hol_develop_steel = {
@@ -46,14 +27,68 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT }
+			FROM = { is_fully_controlled_by = ROOT is_on_continent = europe }
 		}
 		on_map_mode = map_and_decisions_view
-		days_remove = 60
+		days_remove = 90
 		modifier = { consumer_goods_factor = 0.05 }
 		complete_effect = {
 			country_event = hol_republiek.121
-			FROM = { add_resource = { type = steel amount = 6 } }
+			FROM = { add_resource = { type = steel amount = 5 } }
+		}
+		ai_will_do = { base = 12 }
+	}
+
+	hol_develop_coal = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT is_on_continent = europe }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 90
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			country_event = hol_republiek.220
+			FROM = { add_resource = { type = steel amount = 4 } }
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	hol_develop_oil = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT is_on_continent = asia }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 90
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			country_event = hol_republiek.120
+			FROM = { add_resource = { type = oil amount = 6 } }
+		}
+		ai_will_do = { base = 12 }
+	}
+
+	hol_develop_rubber = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT is_on_continent = asia }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 90
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			country_event = hol_republiek.221
+			FROM = { add_resource = { type = rubber amount = 6 } }
 		}
 		ai_will_do = { base = 10 }
 	}
@@ -64,16 +99,55 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT }
+			FROM = { is_fully_controlled_by = ROOT is_on_continent = south_america }
 		}
 		on_map_mode = map_and_decisions_view
-		days_remove = 60
+		days_remove = 120
 		modifier = { consumer_goods_factor = 0.05 }
 		complete_effect = {
 			country_event = hol_republiek.122
 			FROM = { add_resource = { type = aluminium amount = 6 } }
 		}
-		ai_will_do = { base = 10 }
+		ai_will_do = { base = 8 }
+	}
+
+	hol_develop_chromium = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT is_on_continent = africa }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 120
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			country_event = hol_republiek.222
+			FROM = { add_resource = { type = chromium amount = 6 } }
+		}
+		ai_will_do = { base = 8 }
+	}
+
+	hol_grote_ontwikkeling = {
+		icon = GFX_decision_generic_construction
+		allowed = { original_tag = HOL }
+		visible = { has_completed_focus = HOL_continue_the_public_works }
+		state_target = yes
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT }
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 180
+		modifier = { consumer_goods_factor = 0.10 }
+		complete_effect = {
+			country_event = hol_republiek.223
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+		ai_will_do = { base = 5 }
 	}
 }
 

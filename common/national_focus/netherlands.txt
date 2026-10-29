@@ -8744,7 +8744,7 @@ if = {
 	focus = {
 		id = hol_aandeel_stem
 		icon = GFX_goal_generic_national_unity
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = hol_vroedschap
 		cost = 4.3
@@ -9127,7 +9127,7 @@ if = {
 	focus = {
 		id = hol_volksdemocratie
 		icon = GFX_goal_generic_major_alliance
-		x = 1
+		x = 2
 		y = 0
 		relative_position_id = hol_dageraad
 		cost = 4.3
@@ -9228,6 +9228,31 @@ if = {
 			if = { limit = { country_exists = DEN } add_to_faction = DEN }
 			if = { limit = { country_exists = NOR } add_to_faction = NOR }
 			if = { limit = { country_exists = SWI } add_to_faction = SWI }
+		}
+	}
+
+	focus = {
+		id = hol_noordse_liga
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 0
+		relative_position_id = hol_zusterrepublieken
+		prerequisite = { focus = hol_zusterrepublieken }
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+		completion_reward = {
+			country_event = hol_republiek.210
+			add_political_power = 25
+			every_country = {
+				limit = {
+					OR = { tag = DEN tag = SWE tag = NOR tag = FIN }
+					is_democratic = yes
+					NOT = { is_subject_of = HOL }
+					NOT = { is_at_war = yes }
+					NOT = { at_war_with = HOL }
+				}
+				country_event = { id = hol_republiek.211 days = 0 }
+			}
 		}
 	}
 
@@ -9650,34 +9675,6 @@ if = {
 	}
 
 	focus = {
-		id = hol_luxemburg
-		icon = GFX_goal_generic_demand_territory
-		x = 1
-		y = 0
-		relative_position_id = hol_zeventien
-		cost = 4.3
-		prerequisite = { focus = hol_zeventien }
-		completion_reward = {
-			country_event = hol_republiek.117
-			if = {
-				limit = { has_idea = hol_zeventien_idea_3 }
-				swap_ideas = { remove_idea = hol_zeventien_idea_3 add_idea = hol_zeventien_idea_4 }
-			}
-			else_if = {
-				limit = { has_idea = hol_zeventien_idea_2 }
-				swap_ideas = { remove_idea = hol_zeventien_idea_2 add_idea = hol_zeventien_idea_3 }
-			}
-			else_if = {
-				limit = { has_idea = hol_zeventien_idea }
-				swap_ideas = { remove_idea = hol_zeventien_idea add_idea = hol_zeventien_idea_2 }
-			}
-			else = {
-				add_ideas = hol_zeventien_idea
-			}
-		}
-	}
-
-	focus = {
 		id = hol_belgie
 		icon = GFX_goal_generic_demand_territory
 		x = 0
@@ -9685,8 +9682,24 @@ if = {
 		relative_position_id = hol_zeventien
 		cost = 4.3
 		prerequisite = { focus = hol_zeventien }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			country_event = hol_republiek.81
+			country_event = hol_republiek.117
+			add_state_claim = 6
+			add_state_claim = 34
+			add_state_claim = 8
+
+			6 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			34 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			8 = { add_extra_state_shared_building_slots = 1 }
+			add_political_power = 30
 
 			if = {
 				limit = { has_idea = hol_zeventien_idea_3 }
@@ -9705,7 +9718,6 @@ if = {
 			}
 		}
 	}
-
 	focus = {
 		id = hol_rijnrepubliek
 		icon = GFX_goal_support_democracy
@@ -9762,9 +9774,12 @@ if = {
 		}
 	}
 
-		focus = {
+	focus = {
 		id = hol_tweede_tiendaagse
 		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 2
+		relative_position_id = hol_belgie
 		cost = 4.3
 		prerequisite = { focus = hol_belgie }
 		completion_reward = {
@@ -9815,7 +9830,6 @@ if = {
 			else = {
 				add_ideas = hol_zeventien_idea
 			}
-			if = { limit = { country_exists = FRA } create_wargoal = { type = puppet_wargoal_focus target = FRA } }
 		}
 	}
 
@@ -9833,12 +9847,6 @@ if = {
 			add_ideas = hol_verenigde_nederlanden_idea
 			add_stability = 0.10
 			add_war_support = 0.10
-			add_state_core = 6
-			add_state_core = 34
-			add_state_core = 977
-			add_state_core = 980
-			add_state_core = 8
-			add_state_core = 29
 		}
 	}
 
@@ -9969,35 +9977,32 @@ if = {
 	focus = {
 		id = hol_herover_lage_landen
 		icon = GFX_goal_generic_demand_territory
-		x = 3
-		y = 1
-		relative_position_id = hol_uitroeping
-		prerequisite = { focus = hol_uitroeping }
+		x = -1
+		y = 0
+		relative_position_id = hol_belgie
+		prerequisite = { focus = hol_belgie }
 		cost = 4.3
-		search_filters = { FOCUS_FILTER_ANNEXATION }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			add_state_claim = 6
 			add_state_claim = 34
-			add_state_claim = 977
-			add_state_claim = 980
 			add_state_claim = 8
 			6 = { add_core_of = HOL }
 			34 = { add_core_of = HOL }
-			977 = { add_core_of = HOL }
-			980 = { add_core_of = HOL }
 			8 = { add_core_of = HOL }
+			add_ideas = hol_lage_landen_leger_idea
+			add_army_experience = 25
 			add_political_power = 25
 			add_war_support = 0.03
 			country_event = hol_republiek.191
 		}
 	}
-
 	focus = {
 		id = hol_offensief_frankrijk
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 3
-		y = 2
-		relative_position_id = hol_uitroeping
+		x = 0
+		y = 1
+		relative_position_id = hol_herover_lage_landen
 		prerequisite = { focus = hol_herover_lage_landen }
 		cost = 4.3
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
@@ -10007,16 +10012,16 @@ if = {
 			add_state_claim = 310
 			create_wargoal = { type = take_state_focus generator = { 694 310 } target = FRA expire = 0 }
 			add_war_support = 0.05
+			add_army_experience = 20
 			country_event = hol_republiek.200
 		}
 	}
-
 	focus = {
 		id = hol_offensief_brittannie
 		icon = GFX_focus_attack_britain
-		x = 3
-		y = 3
-		relative_position_id = hol_uitroeping
+		x = 0
+		y = 1
+		relative_position_id = hol_offensief_frankrijk
 		prerequisite = { focus = hol_offensief_frankrijk }
 		cost = 4.3
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
@@ -10025,6 +10030,8 @@ if = {
 			create_wargoal = { type = annex_everything target = ENG expire = 0 }
 			add_war_support = 0.05
 			add_political_power = 50
+			add_army_experience = 20
+			country_event = hol_republiek.202
 		}
 	}
 }

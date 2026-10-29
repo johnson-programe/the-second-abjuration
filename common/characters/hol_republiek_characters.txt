@@ -44,4 +44,177 @@ characters = {
 			expire = "1965.1.1"
 		}
 	}
+
+	# ===== v27 advisors =====
+	HOL_rep_adv_colijn = {
+		name = HOL_rep_adv_colijn
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_godfried_van_voorst_tot_voorst"
+				small = "GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = HOL_rep_adv_colijn
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_industrie_patron }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HOL_rep_adv_drees = {
+		name = HOL_rep_adv_drees
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_wim_schermerhorn"
+				small = "GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = HOL_rep_adv_drees
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_volkstribuun }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HOL_rep_adv_de_geer = {
+		name = HOL_rep_adv_de_geer
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_conrad_helfrich"
+				small = "GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = HOL_rep_adv_de_geer
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_staatsraad }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HOL_rep_adv_oud = {
+		name = HOL_rep_adv_oud
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_petrus_wilhelmus_best"
+				small = "GFX_idea_generic_political_advisor_europe_4"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = HOL_rep_adv_oud
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_liberale_koers }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HOL_rep_chief_army = {
+		name = HOL_rep_chief_army
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_izaak_reijnders"
+				small = "GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = HOL_rep_chief_army
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_veldheer }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HOL_rep_chief_navy = {
+		name = HOL_rep_chief_navy
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_karel_doorman"
+				small = "GFX_idea_generic_political_advisor_europe_6"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = HOL_rep_chief_navy
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_vlootvoogd }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HOL_rep_chief_air = {
+		name = HOL_rep_chief_air
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_henri_winkelman"
+				small = "GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = HOL_rep_chief_air
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_luchtmaarschalk }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HOL_rep_high_command = {
+		name = HOL_rep_high_command
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_hein_ter_poorten"
+				small = "GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = HOL_rep_high_command
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_commando }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HOL_rep_theorist = {
+		name = HOL_rep_theorist
+		portraits = {
+			army = {
+				large = "GFX_portrait_hol_anton_mussert"
+				small = "GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = HOL_rep_theorist
+			allowed = { original_tag = HOL }
+			visible = { original_tag = HOL }
+			available = { always = yes }
+			traits = { hol_trait_strateeg }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
 }

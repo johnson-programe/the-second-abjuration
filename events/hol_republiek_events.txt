@@ -1276,3 +1276,123 @@ country_event = {
 		add_political_power = 25
 	}
 }
+
+# ===== v27 expansion & diplomacy =====
+
+country_event = {
+	id = hol_republiek.202
+	title = hol_republiek.202.t
+	desc = hol_republiek.202.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.202.a
+		add_war_support = 0.03
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.210
+	title = hol_republiek.210.t
+	desc = hol_republiek.210.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.210.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.211
+	title = hol_republiek.211.t
+	desc = hol_republiek.211.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.211.a
+		HOL = {
+			puppet = PREV
+			set_autonomy = { target = PREV autonomous_state = hol_brother_republic }
+			add_to_faction = PREV
+			country_event = hol_republiek.212
+		}
+		add_political_power = 25
+		add_stability = 0.05
+		ai_chance = {
+			base = 65
+			modifier = {
+				add = 20
+				has_opinion = { target = HOL value > 50 }
+			}
+			modifier = {
+				add = -25
+				is_at_war = yes
+			}
+		}
+	}
+	option = {
+		name = hol_republiek.211.b
+		HOL = {
+			add_opinion_modifier = { target = PREV modifier = hol_republiek_sympathie }
+		}
+		add_political_power = 10
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	id = hol_republiek.212
+	title = hol_republiek.212.t
+	desc = hol_republiek.212.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.212.a
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = hol_republiek.220
+	title = hol_republiek.220.t
+	desc = hol_republiek.220.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.220.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = hol_republiek.221
+	title = hol_republiek.221.t
+	desc = hol_republiek.221.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.221.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = hol_republiek.222
+	title = hol_republiek.222.t
+	desc = hol_republiek.222.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.222.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = hol_republiek.223
+	title = hol_republiek.223.t
+	desc = hol_republiek.223.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.223.a
+		add_political_power = 15
+		add_stability = 0.02
+	}
+}
