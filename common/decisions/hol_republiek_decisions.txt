@@ -9,7 +9,7 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT }
+			FROM = { is_fully_controlled_by = ROOT OR = { state = 7 state = 35 state = 36 } }
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 60
@@ -27,7 +27,7 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT is_on_continent = europe }
+			FROM = { is_fully_controlled_by = ROOT state = 7 }
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 90
@@ -45,7 +45,7 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT is_on_continent = europe }
+			FROM = { is_fully_controlled_by = ROOT state = 35 }
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 90
@@ -63,7 +63,7 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT is_on_continent = asia }
+			FROM = { is_fully_controlled_by = ROOT is_owned_by = INS }
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 90
@@ -81,7 +81,7 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT is_on_continent = asia }
+			FROM = { is_fully_controlled_by = ROOT is_owned_by = INS }
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 90
@@ -99,7 +99,7 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT is_on_continent = south_america }
+			FROM = { is_fully_controlled_by = ROOT is_owned_by = SUR }
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 120
@@ -117,7 +117,7 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT is_on_continent = africa }
+			FROM = { is_fully_controlled_by = ROOT is_owned_by = SAF }
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 120
@@ -135,7 +135,7 @@ hol_ontwikkeling = {
 		visible = { has_completed_focus = HOL_continue_the_public_works }
 		state_target = yes
 		target_trigger = {
-			FROM = { is_fully_controlled_by = ROOT }
+			FROM = { is_fully_controlled_by = ROOT OR = { state = 7 state = 35 state = 36 } }
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 180
@@ -442,14 +442,12 @@ hol_lage_landen = {
 		available = {
 			OR = {
 				FRA = { is_subject_of = HOL }
-				ENG = { is_subject_of = HOL }
 				GER = { is_subject_of = HOL has_cosmetic_tag = RHE }
 				GER = { is_subject_of = HOL has_cosmetic_tag = HOL_BR_GER }
 			}
 		}
 		complete_effect = {
 			if = { limit = { FRA = { is_subject_of = HOL } } set_autonomy = { target = FRA autonomous_state = hol_brother_republic } FRA = { set_cosmetic_tag = HOL_BR_FRA } }
-			if = { limit = { ENG = { is_subject_of = HOL } } set_autonomy = { target = ENG autonomous_state = hol_brother_republic } ENG = { set_cosmetic_tag = HOL_BR_ENG } }
 			if = {
 				limit = { GER = { is_subject_of = HOL } }
 				set_autonomy = { target = GER autonomous_state = hol_brother_republic }

@@ -13,7 +13,6 @@
 	continuous_focus_position = { x = 0 y = 900 }
 	shared_focus = hol_joint_raad
 	shared_focus = hol_joint_sur
-	shared_focus = hol_sur_expansie
 	shared_focus = hol_sur_industrie
 	shared_focus = hol_sur_militair
 	shared_focus = hol_sur_politiek

@@ -1403,3 +1403,36 @@ country_event = {
 		add_stability = 0.02
 	}
 }
+
+country_event = {
+	id = hol_republiek.224
+	title = hol_republiek.224.t
+	desc = hol_republiek.224.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.224.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.225
+	title = hol_republiek.225.t
+	desc = hol_republiek.225.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.225.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hol_republiek.226
+	title = hol_republiek.226.t
+	desc = hol_republiek.226.d
+	is_triggered_only = yes
+	option = {
+		name = hol_republiek.226.a
+		add_political_power = 25
+	}
+}

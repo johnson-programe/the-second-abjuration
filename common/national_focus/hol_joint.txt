@@ -56,50 +56,6 @@ joint_focus = {
 }
 
 joint_focus = {
-	id = hol_sur_expansie
-	icon = GFX_goal_generic_position_armies
-	x = -1
-	y = 2
-	relative_position_id = hol_joint_sur
-	offset = { x = 0 y = 0 trigger = { tag = HOL } }
-	offset = { x = -11 y = 0 trigger = { tag = INS } }
-	offset = { x = -5 y = 0 trigger = { tag = SAF } }
-	offset = { x = -41 y = 0 trigger = { tag = SUR } }
-	cost = 4.3
-	available = {
-		OR = { tag = HOL tag = SUR }
-		has_completed_focus = hol_joint_sur
-	}
-	completion_reward = { }
-	completion_reward_joint_originator = {
-		add_political_power = 25
-		every_country = {
-			limit = {
-				NOT = { tag = HOL }
-				NOT = { is_subject_of = HOL }
-				any_owned_state = { OR = { is_on_continent = south_america region = 34 region = 53 } }
-			}
-			HOL = { create_wargoal = { type = annex_everything target = PREV } }
-		}
-		every_country = {
-			every_owned_state = {
-				limit = { OR = { is_on_continent = south_america region = 34 region = 53 } }
-				add_core_of = SUR
-			}
-		}
-	}
-	completion_reward_joint_member = {
-		add_political_power = 25
-		every_country = {
-			every_owned_state = {
-				limit = { OR = { is_on_continent = south_america region = 34 region = 53 } }
-				add_core_of = SUR
-			}
-		}
-	}
-}
-
-joint_focus = {
 	id = hol_sur_industrie
 	icon = GFX_goal_generic_position_armies
 	x = 0
@@ -213,50 +169,6 @@ joint_focus = {
 }
 
 joint_focus = {
-	id = hol_ins_expansie
-	icon = GFX_goal_generic_position_armies
-	x = -1
-	y = 2
-	relative_position_id = hol_joint_ins
-	offset = { x = 0 y = 0 trigger = { tag = HOL } }
-	offset = { x = -11 y = 0 trigger = { tag = INS } }
-	offset = { x = -5 y = 0 trigger = { tag = SAF } }
-	offset = { x = -41 y = 0 trigger = { tag = SUR } }
-	cost = 4.3
-	available = {
-		OR = { tag = HOL tag = INS }
-		has_completed_focus = hol_joint_ins
-	}
-	completion_reward = { }
-	completion_reward_joint_originator = {
-		add_political_power = 25
-		every_country = {
-			limit = {
-				NOT = { tag = HOL }
-				NOT = { is_subject_of = HOL }
-				any_owned_state = { OR = { region = 91 region = 93 region = 158 region = 159 region = 160 region = 167 region = 187 region = 188 region = 189 region = 228 region = 229 } }
-			}
-			HOL = { create_wargoal = { type = annex_everything target = PREV } }
-		}
-		every_country = {
-			every_owned_state = {
-				limit = { OR = { region = 91 region = 93 region = 158 region = 159 region = 160 region = 167 region = 187 region = 188 region = 189 region = 228 region = 229 } }
-				add_core_of = INS
-			}
-		}
-	}
-	completion_reward_joint_member = {
-		add_political_power = 25
-		every_country = {
-			every_owned_state = {
-				limit = { OR = { region = 91 region = 93 region = 158 region = 159 region = 160 region = 167 region = 187 region = 188 region = 189 region = 228 region = 229 } }
-				add_core_of = INS
-			}
-		}
-	}
-}
-
-joint_focus = {
 	id = hol_ins_industrie
 	icon = GFX_goal_generic_position_armies
 	x = 0
@@ -366,50 +278,6 @@ joint_focus = {
 		add_political_power = 30
 		add_stability = 0.02
 		add_to_variable = { var = hol_saf_gehoorzaamheid value = 1 }
-	}
-}
-
-joint_focus = {
-	id = hol_saf_expansie
-	icon = GFX_goal_generic_position_armies
-	x = -1
-	y = 2
-	relative_position_id = hol_joint_saf
-	offset = { x = 0 y = 0 trigger = { tag = HOL } }
-	offset = { x = -11 y = 0 trigger = { tag = INS } }
-	offset = { x = -5 y = 0 trigger = { tag = SAF } }
-	offset = { x = -41 y = 0 trigger = { tag = SUR } }
-	cost = 4.3
-	available = {
-		OR = { tag = HOL tag = SAF }
-		has_completed_focus = hol_joint_saf
-	}
-	completion_reward = { }
-	completion_reward_joint_originator = {
-		add_political_power = 25
-		every_country = {
-			limit = {
-				NOT = { tag = HOL }
-				NOT = { is_subject_of = HOL }
-				any_owned_state = { is_on_continent = africa }
-			}
-			HOL = { create_wargoal = { type = annex_everything target = PREV } }
-		}
-		every_country = {
-			every_owned_state = {
-				limit = { is_on_continent = africa }
-				add_core_of = SAF
-			}
-		}
-	}
-	completion_reward_joint_member = {
-		add_political_power = 25
-		every_country = {
-			every_owned_state = {
-				limit = { is_on_continent = africa }
-				add_core_of = SAF
-			}
-		}
 	}
 }
 

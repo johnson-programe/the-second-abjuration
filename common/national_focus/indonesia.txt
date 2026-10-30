@@ -50,7 +50,6 @@ focus_tree = {
 	shared_focus = ABDA_abdacom
 	shared_focus = hol_joint_raad
 	shared_focus = hol_joint_ins
-	shared_focus = hol_ins_expansie
 	shared_focus = hol_ins_industrie
 	shared_focus = hol_ins_militair
 	shared_focus = hol_ins_politiek

@@ -30,19 +30,21 @@ focus_tree = {
 	shared_focus = hol_joint_sur
 	shared_focus = hol_joint_ins
 	shared_focus = hol_joint_saf
-	shared_focus = hol_sur_expansie
 	shared_focus = hol_sur_industrie
 	shared_focus = hol_sur_militair
 	shared_focus = hol_sur_politiek
-	shared_focus = hol_ins_expansie
 	shared_focus = hol_ins_industrie
 	shared_focus = hol_ins_militair
 	shared_focus = hol_ins_politiek
-	shared_focus = hol_saf_expansie
 	shared_focus = hol_saf_industrie
 	shared_focus = hol_saf_militair
 	shared_focus = hol_saf_politiek
 	shared_focus = hol_joint_rijksbezit
+	shared_focus = hol_joint_rijkswetenschap
+	shared_focus = hol_joint_rijksindustrie
+	shared_focus = hol_joint_rijksleger
+	shared_focus = hol_joint_rijksvloot
+	shared_focus = hol_joint_rijksbestuur
 
 
 
@@ -9791,6 +9793,103 @@ if = {
 		}
 	}
 
+
+	focus = {
+		id = hol_expansie_amerika
+		icon = GFX_goal_generic_position_armies
+		x = -1
+		y = 1
+		relative_position_id = hol_latijns_amerika
+		prerequisite = { focus = hol_latijns_amerika }
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = hol_republiek.224
+			every_country = {
+				limit = {
+					NOT = { tag = HOL }
+					NOT = { is_subject_of = HOL }
+					any_owned_state = { OR = { is_on_continent = south_america region = 34 region = 53 } }
+				}
+				create_wargoal = { type = annex_everything target = PREV }
+			}
+			if = {
+				limit = { country_exists = SUR }
+				every_country = {
+					every_owned_state = {
+						limit = { OR = { is_on_continent = south_america region = 34 region = 53 } }
+						add_core_of = SUR
+					}
+				}
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = hol_expansie_indie
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = hol_latijns_amerika
+		prerequisite = { focus = hol_latijns_amerika }
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = hol_republiek.225
+			every_country = {
+				limit = {
+					NOT = { tag = HOL }
+					NOT = { is_subject_of = HOL }
+					any_owned_state = { OR = { region = 91 region = 93 region = 158 region = 159 region = 160 region = 167 region = 187 region = 188 region = 189 region = 228 region = 229 } }
+				}
+				create_wargoal = { type = annex_everything target = PREV }
+			}
+			if = {
+				limit = { country_exists = INS }
+				every_country = {
+					every_owned_state = {
+						limit = { OR = { region = 91 region = 93 region = 158 region = 159 region = 160 region = 167 region = 187 region = 188 region = 189 region = 228 region = 229 } }
+						add_core_of = INS
+					}
+				}
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = hol_expansie_afrika
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		relative_position_id = hol_latijns_amerika
+		prerequisite = { focus = hol_latijns_amerika }
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = hol_republiek.226
+			every_country = {
+				limit = {
+					NOT = { tag = HOL }
+					NOT = { is_subject_of = HOL }
+					any_owned_state = { is_on_continent = africa }
+				}
+				create_wargoal = { type = annex_everything target = PREV }
+			}
+			if = {
+				limit = { country_exists = SAF }
+				every_country = {
+					every_owned_state = {
+						limit = { is_on_continent = africa }
+						add_core_of = SAF
+					}
+				}
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
 	# ---------- LOW COUNTRIES (x 58-59) ----------
 	focus = {
 		id = hol_scheuring
@@ -10196,6 +10295,15 @@ if = {
 		will_lead_to_war_with = ENG
 		completion_reward = {
 			create_wargoal = { type = annex_everything target = ENG expire = 0 }
+			if = {
+				limit = { country_exists = ENG }
+				ENG = {
+					every_owned_state = {
+						limit = { is_on_continent = europe }
+						add_core_of = HOL
+					}
+				}
+			}
 			add_war_support = 0.05
 			add_political_power = 50
 			add_army_experience = 20
