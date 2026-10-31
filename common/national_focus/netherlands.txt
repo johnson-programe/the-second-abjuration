@@ -1183,7 +1183,7 @@ focus_tree = {
 		prerequisite = { focus = HOL_the_east_indies_war_machine }
 		icon = GFX_goal_generic_amphibious_assault
 		x = 150
-		y = 150
+		y = 155
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -1247,9 +1247,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_prepare_for_our_return }
 		icon = GFX_focus_hol_liberation
-		x = 0
-		y = 1
-		relative_position_id = HOL_prepare_for_our_return
+		x = 151
+		y = 154
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -4822,8 +4821,8 @@ focus_tree = {
 			}
 		}
 		icon = GFX_focus_hol_gateway_to_europe
-		x = 150
-		y = 150
+		x = 156
+		y = 152
 		cost = 4.3
 		available = { always = no }
 
@@ -4889,8 +4888,8 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_trade
 		cancel_if_invalid = no
-		x = 150
-		y = 150
+		x = 151
+		y = 151
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -4979,9 +4978,8 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_positive_trade_relations
 		cancel_if_invalid = no
-		x = 0
-		y = 1
-		relative_position_id = HOL_gateway_to_europe
+		x = 152
+		y = 154
 		cost = 4.3
 
 		ai_will_do = {
@@ -5056,9 +5054,8 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_trade
 		cancel_if_invalid = no
-		x = 4
-		y = 1
-		relative_position_id = HOL_gateway_to_europe
+		x = 150
+		y = 151
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -5132,9 +5129,8 @@ focus_tree = {
 		id = HOL_volk_en_vaderland
 		prerequisite = { focus = HOL_cave_to_the_germans }
 		icon = GFX_goal_support_fascism
-		x = -3
-		y = 1
-		relative_position_id = HOL_cave_to_the_germans
+		x = 156
+		y = 157
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -5161,9 +5157,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_volk_en_vaderland }
 		icon = GFX_goal_generic_more_territorial_claims
-		x = 1
-		y = 1
-		relative_position_id = HOL_volk_en_vaderland
+		x = 153
+		y = 151
 		cost = 4.3
 
 		ai_will_do = {
@@ -5192,9 +5187,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_volk_en_vaderland }
 		icon = GFX_focus_generic_support_the_left_right
-		x = -1
-		y = 1
-		relative_position_id = HOL_volk_en_vaderland
+		x = 152
+		y = 156
 		cost = 4.3
 
 		ai_will_do = {
@@ -5246,9 +5240,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_strength_over_blood }
 		icon = GFX_focus_chi_mission_to_germany
-		x = -1
-		y = 1
-		relative_position_id = HOL_strength_over_blood
+		x = 154
+		y = 153
 		cost = 4.3
 
 		ai_will_do = {
@@ -5268,9 +5261,8 @@ focus_tree = {
 		id = HOL_german_technological_exchange
 		prerequisite = { focus = HOL_join_germany }
 		icon = GFX_goal_tfv_generic_tech_sharing
-		x = -1
-		y = 1
-		relative_position_id = HOL_join_germany
+		x = 157
+		y = 152
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -5300,9 +5292,8 @@ focus_tree = {
 			}
 		}
 		icon = GFX_focus_generic_tank_production
-		x = -1
-		y = 3
-		relative_position_id = HOL_german_technological_exchange
+		x = 156
+		y = 150
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -5637,9 +5628,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_join_germany }
 		icon = GFX_focus_chi_collaboration_with_the_japanese
-		x = 0
-		y = 2
-		relative_position_id = HOL_join_germany
+		x = 156
+		y = 154
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -5659,9 +5649,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_placate_the_japanese }
 		icon = GFX_goal_generic_occupy_states_coastal
-		x = 0
-		y = 2
-		relative_position_id = HOL_placate_the_japanese
+		x = 154
+		y = 150
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -5751,10 +5740,8 @@ focus_tree = {
 
 		icon = GFX_goal_generic_demand_territory
 
-		x = 1
-		y = 1
-		relative_position_id = HOL_strength_over_blood
-
+		x = 151
+		y = 157
 		cost = 4.3
 
 		ai_will_do = {
@@ -5777,9 +5764,8 @@ focus_tree = {
 		id = HOL_implement_the_program
 		prerequisite = { focus = HOL_the_netherlands_first }
 		icon = GFX_goal_generic_military_sphere
-		x = 0
-		y = 2
-		relative_position_id = HOL_the_netherlands_first
+		x = 153
+		y = 153
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -5854,9 +5840,8 @@ focus_tree = {
 		id = HOL_taking_back_french_flanders
 		prerequisite = { focus = HOL_implement_the_program }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 0
-		y = 2
-		relative_position_id = HOL_implement_the_program
+		x = 154
+		y = 156
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -5917,10 +5902,8 @@ focus_tree = {
 
 		icon = GFX_focus_hol_united_netherlands
 
-		x = 1
-		y = 1
-		relative_position_id = HOL_join_germany
-
+		x = 154
+		y = 157
 		cost = 4.3
 
 		ai_will_do = {
@@ -5979,9 +5962,8 @@ focus_tree = {
 		will_lead_to_war_with = ENG
 		will_lead_to_war_with = SAF
 		icon = GFX_goal_generic_position_armies
-		x = 0
-		y = 2
-		relative_position_id = HOL_the_united_netherlands
+		x = 155
+		y = 156
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -6042,9 +6024,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_taking_back_our_old_colonies }
 		will_lead_to_war_with = USA
 		icon = GFX_goal_generic_territory_or_war
-		x = 0
-		y = 2
-		relative_position_id = HOL_taking_back_our_old_colonies
+		x = 152
+		y = 153
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -6089,9 +6070,8 @@ focus_tree = {
 		mutually_exclusive = { focus = HOL_oranje_boven }
 		prerequisite = { focus = HOL_maintain_trade_neutrality }
 		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
-		x = -2
-		y = 1
-		relative_position_id = HOL_maintain_trade_neutrality
+		x = 157
+		y = 153
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -6268,8 +6248,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_legacy_of_the_de_zeven_provincien_mutiny }
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 150
-		y = 150
+		x = 156
+		y = 151
 		cost = 4.3
 
 		ai_will_do = {
@@ -6433,8 +6413,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_legacy_of_the_de_zeven_provincien_mutiny }
 		icon = GFX_goal_tfv_burn_the_royal_portraits
-		x = 150
-		y = 150
+		x = 151
+		y = 155
 		cost = 4.3
 
 		ai_will_do = {
@@ -6493,9 +6473,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_red_is_the_new_orange }
 		dynamic = yes
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		x = -2
-		y = 1
-		relative_position_id = HOL_decolonization
+		x = 151
+		y = 150
 		cost = 4.3
 
 		ai_will_do = {
@@ -6517,9 +6496,8 @@ focus_tree = {
 		id = HOL_soviet_technical_teams
 		prerequisite = { focus = HOL_affirm_loyalty_to_moscow }
 		icon = GFX_goal_generic_production2
-		x = -1
-		y = 1
-		relative_position_id = HOL_affirm_loyalty_to_moscow
+		x = 151
+		y = 156
 		cost = 4.3
 
 		ai_will_do = {
@@ -6547,9 +6525,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_soviet_technical_teams }
 		will_lead_to_war_with = GER
 		icon = GFX_focus_attack_germany
-		x = 0
-		y = 2
-		relative_position_id = HOL_soviet_technical_teams
+		x = 153
+		y = 154
 		cost = 4.3
 
 		ai_will_do = {
@@ -6609,9 +6586,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_decolonization }
 		prerequisite = { focus = HOL_red_is_the_new_orange }
 		icon = GFX_focus_chi_reach_out_to_france
-		x = 0
-		y = 1
-		relative_position_id = HOL_decolonization
+		x = 155
+		y = 153
 		cost = 4.3
 
 		ai_will_do = {
@@ -6661,9 +6637,8 @@ focus_tree = {
 		id = HOL_french_military_mission
 		prerequisite = { focus = HOL_join_the_french }
 		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 2
-		relative_position_id = HOL_join_the_french
+		x = 155
+		y = 152
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -6691,9 +6666,8 @@ focus_tree = {
 		id = HOL_socialist_industrial_support
 		prerequisite = { focus = HOL_affirm_loyalty_to_moscow focus = HOL_join_the_french }
 		icon = GFX_goal_generic_soviet_construction
-		x = 1
-		y = 1
-		relative_position_id = HOL_affirm_loyalty_to_moscow
+		x = 150
+		y = 156
 		cost = 4.3
 
 		ai_will_do = {
@@ -6714,9 +6688,8 @@ focus_tree = {
 		id = HOL_for_the_common_good
 		prerequisite = { focus = HOL_socialist_industrial_support }
 		icon = GFX_focus_generic_socialist_science
-		x = -1
-		y = 1
-		relative_position_id = HOL_socialist_industrial_support
+		x = 152
+		y = 152
 		cost = 4.3
 
 		ai_will_do = {
@@ -6767,9 +6740,8 @@ focus_tree = {
 		id = HOL_mobilize_the_masses
 		prerequisite = { focus = HOL_socialist_industrial_support }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 0
-		y = 2
-		relative_position_id = HOL_socialist_industrial_support
+		x = 154
+		y = 154
 		cost = 4.3
 
 		ai_will_do = {
@@ -6801,9 +6773,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_decolonization }
 		prerequisite = { focus = HOL_red_is_the_new_orange }
 		icon = GFX_focus_generic_join_comintern
-		x = 2
-		y = 1
-		relative_position_id = HOL_decolonization
+		x = 155
+		y = 150
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -6907,9 +6878,8 @@ focus_tree = {
 		will_lead_to_war_with = BEL
 		will_lead_to_war_with = LUX
 		icon = GFX_goal_generic_war_with_comintern
-		x = -1
-		y = 1
-		relative_position_id = HOL_bastion_of_true_communism
+		x = 157
+		y = 150
 		cost = 4.3
 
 		ai_will_do = {
@@ -6945,9 +6915,8 @@ focus_tree = {
 		id = HOL_enemies_on_all_fronts
 		prerequisite = { focus = HOL_bastion_of_true_communism }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 1
-		y = 1
-		relative_position_id = HOL_bring_socialism_south
+		x = 151
+		y = 152
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -6967,9 +6936,8 @@ focus_tree = {
 		id = HOL_haven_of_tolerance
 		prerequisite = { focus = HOL_enemies_on_all_fronts }
 		icon = GFX_goal_support_communism
-		x = 0
-		y = 2
-		relative_position_id = HOL_enemies_on_all_fronts
+		x = 151
+		y = 153
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7007,9 +6975,8 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 		will_lead_to_war_with = USA
 		icon = GFX_goal_generic_occupy_start_war
-		x = 1
-		y = 1
-		relative_position_id = HOL_french_military_mission
+		x = 157
+		y = 154
 		cost = 4.3
 		ai_will_do = {
 			base = 0
@@ -7105,9 +7072,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_maintain_trade_neutrality }
 		icon = GFX_focus_hol_oranje_boven
-		x = 2
-		y = 1
-		relative_position_id = HOL_maintain_trade_neutrality
+		x = 155
+		y = 154
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7132,9 +7098,8 @@ focus_tree = {
 		id = HOL_symbol_of_resistance
 		prerequisite = { focus = HOL_oranje_boven }
 		icon = GFX_focus_generic_support_the_left_right
-		x = -1
-		y = 1
-		relative_position_id = HOL_oranje_boven
+		x = 153
+		y = 156
 		cost = 4.3
 
 		ai_will_do = {
@@ -7163,9 +7128,8 @@ focus_tree = {
 			has_government = neutrality
 		}
 		icon = GFX_goal_generic_political_pressure
-		x = 1
-		y = 1
-		relative_position_id = HOL_oranje_boven
+		x = 152
+		y = 155
 		cost = 4.3
 
 		ai_will_do = {
@@ -7209,9 +7173,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_symbol_of_resistance }
 		prerequisite = { focus = HOL_replace_the_defeatist_government }
 		icon = GFX_focus_hol_the_only_man_in_the_dutch_government
-		x = 1
-		y = 1
-		relative_position_id = HOL_symbol_of_resistance
+		x = 152
+		y = 157
 		cost = 4.3
 
 		ai_will_do = {
@@ -7236,9 +7199,8 @@ focus_tree = {
 		id = HOL_de_vernieuwing
 		prerequisite = { focus = HOL_the_only_man_in_the_dutch_government }
 		icon = GFX_goal_generic_demand_territory
-		x = -1
-		y = 1
-		relative_position_id = HOL_the_only_man_in_the_dutch_government
+		x = 155
+		y = 151
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7292,9 +7254,8 @@ focus_tree = {
 		id = HOL_depillarization
 		prerequisite = { focus = HOL_the_only_man_in_the_dutch_government }
 		icon = GFX_goal_generic_national_unity
-		x = 1
-		y = 1
-		relative_position_id = HOL_the_only_man_in_the_dutch_government
+		x = 157
+		y = 151
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7313,9 +7274,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_de_vernieuwing }
 		prerequisite = { focus = HOL_depillarization }
 		icon = GFX_goal_anschluss
-		x = 1
-		y = 1
-		relative_position_id = HOL_de_vernieuwing
+		x = 150
+		y = 150
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7365,9 +7325,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_a_new_dutch_unity }
 		prerequisite = { focus = HOL_request_allied_favors }
 		icon = GFX_goal_generic_position_armies
-		x = 1
-		y = 1
-		relative_position_id = HOL_a_new_dutch_unity
+		x = 155
+		y = 155
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7386,9 +7345,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_de_vernieuwing }
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 0
-		y = 2
-		relative_position_id = HOL_de_vernieuwing
+		x = 156
+		y = 155
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7413,9 +7371,8 @@ focus_tree = {
 		cancel_if_invalid = yes
 		prerequisite = { focus = HOL_revive_the_buffer_state_proposal }
 		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 1
-		relative_position_id = HOL_revive_the_buffer_state_proposal
+		x = 150
+		y = 152
 		cost = 4.3
 
 		available_if_capitulated = no
@@ -7530,9 +7487,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_a_new_dutch_unity }
 		icon = GFX_goal_generic_dangerous_deal
-		x = 0
-		y = 3
-		relative_position_id = HOL_a_new_dutch_unity
+		x = 157
+		y = 157
 		cost = 4.3
 
 		ai_will_do = {
@@ -7683,9 +7639,8 @@ focus_tree = {
 		id = HOL_unity_through_democracy
 		prerequisite = { focus = HOL_cave_to_the_british }
 		icon = GFX_goal_support_democracy
-		x = 3
-		y = 1
-		relative_position_id = HOL_cave_to_the_british
+		x = 155
+		y = 157
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7763,9 +7718,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_oranje_boven focus = HOL_unity_through_democracy }
 		icon = GFX_focus_chi_british_cooperation
-		x = 3
-		y = 1
-		relative_position_id = HOL_oranje_boven
+		x = 150
+		y = 153
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7815,9 +7769,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_replace_the_defeatist_government }
 		prerequisite = { focus = HOL_go_with_britain }
 		icon = GFX_goal_generic_propaganda
-		x = 1
-		y = 1
-		relative_position_id = HOL_replace_the_defeatist_government
+		x = 154
+		y = 151
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7841,9 +7794,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_de_vaarplicht }
 		icon = GFX_goal_generic_major_alliance
-		x = 0
-		y = 2
-		relative_position_id = HOL_de_vaarplicht
+		x = 153
+		y = 155
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7877,9 +7829,8 @@ focus_tree = {
 			NOT = { has_completed_focus = HOL_oranje_boven }
 		}
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 1
-		y = 1
-		relative_position_id = HOL_go_with_britain
+		x = 153
+		y = 157
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7903,9 +7854,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_de_vaarplicht focus = HOL_the_singapore_conferences }
 		icon = GFX_goal_generic_navy_submarine
-		x = 1
-		y = 1
-		relative_position_id = HOL_de_vaarplicht
+		x = 157
+		y = 155
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7940,9 +7890,8 @@ focus_tree = {
 		id = HOL_allied_technological_developments
 		prerequisite = { focus = HOL_the_singapore_conferences }
 		icon = GFX_goal_tfv_generic_tech_sharing
-		x = 1
-		y = 1
-		relative_position_id = HOL_the_singapore_conferences
+		x = 152
+		y = 150
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -7963,9 +7912,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_ship_a_day_sinking_quotas }
 		prerequisite = { focus = HOL_allied_technological_developments }
 		icon = GFX_focus_chi_mission_to_the_us
-		x = 1
-		y = 1
-		relative_position_id = HOL_ship_a_day_sinking_quotas
+		x = 153
+		y = 150
 		cost = 4.3
 		
 		ai_will_do = {
@@ -8109,9 +8057,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_request_allied_favors }
 		prerequisite = { focus = HOL_american_west_indies_protectorate }
 		icon = GFX_focus_generic_military_academy
-		x = 1
-		y = 1
-		relative_position_id = HOL_request_allied_favors
+		x = 152
+		y = 151
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8135,9 +8082,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_combined_chiefs_of_staff_representation }
 		icon = GFX_focus_hol_the_fourth_ally
-		x = 0
-		y = 1
-		relative_position_id = HOL_combined_chiefs_of_staff_representation
+		x = 150
+		y = 157
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8204,9 +8150,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_american_west_indies_protectorate }
 		icon = GFX_goal_generic_construct_military
-		x = 1
-		y = 2
-		relative_position_id = HOL_american_west_indies_protectorate
+		x = 150
+		y = 158
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8252,9 +8197,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_unity_through_democracy }
 		icon = GFX_goal_generic_demand_territory
-		x = 2
-		y = 1
-		relative_position_id = HOL_unity_through_democracy
+		x = 156
+		y = 153
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8303,9 +8247,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_lead_the_minor_democracies }
 		icon = GFX_goal_generic_position_armies
-		x = -1
-		y = 1
-		relative_position_id = HOL_lead_the_minor_democracies
+		x = 153
+		y = 152
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8349,9 +8292,8 @@ focus_tree = {
 		id = HOL_responsibility_for_our_own_defense
 		prerequisite = { focus = HOL_lead_the_minor_democracies }
 		icon = GFX_goal_generic_build_tank
-		x = 1
-		y = 1
-		relative_position_id = HOL_lead_the_minor_democracies
+		x = 154
+		y = 155
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8370,9 +8312,8 @@ focus_tree = {
 		prerequisite = { focus = HOL_form_the_benelux }
 		prerequisite = { focus = HOL_responsibility_for_our_own_defense }
 		icon = GFX_goal_generic_construct_military
-		x = 1
-		y = 1
-		relative_position_id = HOL_form_the_benelux
+		x = 150
+		y = 154
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8391,9 +8332,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_lessons_from_the_low_countries }
 		icon = GFX_focus_generic_the_council_of_europe
-		x = 0
-		y = 1
-		relative_position_id = HOL_lessons_from_the_low_countries
+		x = 154
+		y = 152
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8447,9 +8387,8 @@ focus_tree = {
 		id = HOL_the_continents_best_and_brightest
 		prerequisite = { focus = HOL_foundations_for_a_european_union }
 		icon = GFX_goal_tfv_generic_tech_sharing
-		x = -1
-		y = 1
-		relative_position_id = HOL_foundations_for_a_european_union
+		x = 157
+		y = 156
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8477,9 +8416,8 @@ focus_tree = {
 		will_lead_to_war_with = GER
 		will_lead_to_war_with = ENG
 		icon = GFX_goal_generic_major_war
-		x = 1
-		y = 1
-		relative_position_id = HOL_foundations_for_a_european_union
+		x = 156
+		y = 156
 		cost = 4.3
 
 		available_if_capitulated = yes
@@ -8840,7 +8778,7 @@ if = {
 	focus = {
 		id = hol_aandeel_stem
 		icon = GFX_goal_generic_national_unity
-		x = -1
+		x = 1
 		y = 2
 		relative_position_id = hol_vroedschap
 		cost = 4.3

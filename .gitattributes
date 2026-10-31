@@ -1,0 +1,2 @@
+# keep files byte-for-byte: HOI4 needs LF line endings and exact BOMs
+* -text
